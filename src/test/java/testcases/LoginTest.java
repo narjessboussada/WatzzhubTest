@@ -7,7 +7,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,25 +25,38 @@ public class LoginTest extends TestBase {
     }
 
 
-    @Given("l'utilisateur est à la page de connexion")
-    public void l_utilisateur_est_à_la_page_de_connexion() {
-        // Write code here that turns the phrase above into concrete actions
+
+    @Given("arriver à la page d'accueil")
+    public void arriver_à_la_page_d_accueil() {
+        driver.navigate().to("https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants");
+
     }
 
-    @When("l'utilisateur saisit adresse et mot de passe correctement")
-    public void l_utilisateur_saisit_adresse_et_mot_de_passe_correctement() {
-       loginPage.email("rania.tritar@continuousnet.com");
-       loginPage.password("Rania.tritar123");
+    @When("saisir adresse correctement")
+    public void saisir_adresse_correctement() {
+        loginPage.saisirEmail("rania.tritar@continuousnet.com");
     }
 
-    @When("cocher sur la case des conditions générales d'utilisateur et cliquer sur le boutton connexion")
-    public void cocher_sur_la_case_des_conditions_générales_d_utilisateur_et_cliquer_sur_le_boutton_connexion() {
-       loginPage.login();
+    @When("saisir mot de passe correctement")
+    public void saisir_mot_de_passe_correctement() {
+        loginPage.saisirPassword("Rania.tritar123");
+    }
+
+    @When("cocher sur la case des conditions générales d'utilisateur")
+    public void cocher_sur_la_case_des_conditions_générales_d_utilisateur() {
+
+        loginPage.cocher();
+    }
+
+    @When("cliquer sur le boutton connexion")
+    public void cliquer_sur_le_boutton_connexion() {
+
+        loginPage.se_connecter();
     }
 
 
-    @Then("l'utlisateur se navigue à la page Home")
-    public void l_utlisateur_se_navigue_à_la_page_home() {
+    @Then("se naviguer à la page Home")
+    public void se_naviguer_à_la_page_home() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
 
         // Wait for the URL to contain the expected value

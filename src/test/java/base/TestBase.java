@@ -35,10 +35,11 @@ public class TestBase {
     }
 
     @After
+    //nettoyer et fermer les ressources apres l'éxecution des tests
+    //arrêter et fermer le navigateur une fois que tous les tests ont été exécutés.
     public void tearDown() {
-        if (driver != null) {
+        //if (driver != null) {
             // Add any additional cleanup code if needed
-             driver.quit();
+             //driver.quit();
         }
     }
-}

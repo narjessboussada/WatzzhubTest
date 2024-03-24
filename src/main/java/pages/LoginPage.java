@@ -15,28 +15,34 @@ public class LoginPage {
         this.wait = new WebDriverWait(driver, 30);
     }
 
-    public void email(String username) {
+    public void saisirEmail(String username) {
         WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(By.id("email-field")));
         emailField.click();
         emailField.clear();
         emailField.sendKeys(username);
     }
-    public void password(String password) {
+    public void saisirPassword(String password) {
         WebElement passwordField = wait.until(ExpectedConditions.elementToBeClickable(By.id("password-field")));
         passwordField.click();
         passwordField.clear();
         passwordField.sendKeys(password);
     }
 
-    public void login(){
+    public void cocher() {
         WebElement checkBox = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".mat-checkbox-inner-container")));
         checkBox.click();
+    }
+
+    public void se_connecter(){
         //btn de connexion
         WebElement signInButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("sign-in-button")));
         signInButton.click();
+
     }
 
+    // Méthode pour obtenir l'URL actuelle
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
+
 }
