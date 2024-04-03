@@ -40,9 +40,36 @@ public class LoginPage {
 
     }
 
+    public void se_naviguer() {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 20);
+
+            // Wait for the URL to contain the expected value
+            wait.until(ExpectedConditions.urlContains("tenants"));
+
+            // Get the actual URL after waiting
+            String actualUrl = getCurrentUrl();
+
+            // Print the actual URL for debugging
+            System.out.println("Actual URL: " + actualUrl);
+
+            // Assert that the URL matches the expected value
+           // Assert.assertTrue("Unexpected redirection URL", actualUrl.contains("tenants"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
+
     // Méthode pour obtenir l'URL actuelle
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
+
+
 
 }

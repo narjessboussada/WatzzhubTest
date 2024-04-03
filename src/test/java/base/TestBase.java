@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.LoginPage;
 
 public class TestBase {
 
@@ -15,6 +16,7 @@ public class TestBase {
     // Set configuration values directly in the class
     private String browser = "chrome";
     private String testsiteurl = "https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants";
+
 
     @Before
     public void setUp()  {
@@ -32,7 +34,12 @@ public class TestBase {
         wait = new WebDriverWait(driver, 10);  // Set the timeout for WebDriverWait as needed
 
 
+
     }
+
+
+
+
 
     @After
     //nettoyer et fermer les ressources apres l'éxecution des tests
@@ -40,6 +47,6 @@ public class TestBase {
     public void tearDown() {
         //if (driver != null) {
             // Add any additional cleanup code if needed
-             //driver.quit();
+            // driver.quit();
         }
     }
