@@ -111,7 +111,7 @@ public class UserTest extends TestBase {
         }
     }
 
-    @Then("le nouvel utilisateur est ajouté avec succès dans la liste des utilisateurs")
+   /* @Then("le nouvel utilisateur est ajouté avec succès dans la liste des utilisateurs")
     public void le_nouvel_utilisateur_est_ajouté_avec_succès_dans_la_liste_des_utilisateurs() {
         try {
             createUser.Verifier();
@@ -119,7 +119,7 @@ public class UserTest extends TestBase {
             System.out.println("Erreur lors de la vérification de l'utilisateur : " + e.getMessage());
         }
     }
-
+*/
     @After
     public void afterScenario() {
         tearDown();

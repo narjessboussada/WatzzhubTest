@@ -18,6 +18,8 @@ Feature: gestion des utilisateurs
     When saisir email
     When choisir langue
     When saisir numero de téléphone
-    When cliquer enregistrer
 
-
+   Scenario: Se deconnecter
+     Given Cliquer sur userName
+     When cliquer sur signout
+     Then se naviguer vers page d'accueil

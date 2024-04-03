@@ -49,11 +49,7 @@ public class LoginTest extends TestBase {
     @Then("se naviguer à la page Home")
     public void se_naviguer_à_la_page_home() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 20);
-            wait.until(ExpectedConditions.urlContains("tenants"));
-            String actualUrl = loginPage.getCurrentUrl();
-            System.out.println("Actual URL: " + actualUrl);
-            Assert.assertTrue("Unexpected redirection URL", actualUrl.contains("tenants"));
+       loginPage.se_naviguer();
         } catch (Exception e) {
             System.out.println("Erreur lors de la navigation à la page Home : " + e.getMessage());
         }

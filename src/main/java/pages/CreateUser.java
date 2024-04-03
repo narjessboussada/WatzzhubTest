@@ -72,12 +72,12 @@ public class CreateUser {
 
     }
 
-        public void CocherApi(){
+     /*   public void CocherApi(){
             WebElement checkBox = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".mat-checkbox-inner-container")));
             checkBox.click();
         }
-
-    public void saveUser() {
+*/
+    /*public void saveUser() {
         try {
             WebElement saveButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("cdk-focused .mat-icon")));
             saveButton.click();
@@ -86,7 +86,7 @@ public class CreateUser {
             System.out.println("Exception occurred while trying to save user: " + e.getMessage());
 
         }
-    }
+    }*/
     public void Enregistrer(){
         WebElement element = driver.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]/ng-component/app-user/div/div/form/div/button[1]/span[1]/mat-icon"));
         Actions builder = new Actions(driver);
