@@ -29,8 +29,7 @@ public class ExtentReportsClass {
 
     public static WebDriver driver;
     public static ExtentSparkReporter spark;
-    public static ExtentReports extent;
-    public static ExtentTest logger;
+    private static ExtentReports extent;
 
     @BeforeClass
     public static void startReport() {
@@ -53,35 +52,22 @@ public class ExtentReportsClass {
         driver.get("https://www.google.com/");
     }
 
-    @Test
-    public void verifyTitle() {
-        logger = extent.createTest("To verify Google Title");
-        Assert.assertEquals(driver.getTitle(), "Google");
-    }
 
-    @Test
-    public void verifyLogo() {
-        logger = extent.createTest("To verify Google Logo");
-        boolean img = driver.findElement(By.xpath("//img[@id='hplogo']")).isDisplayed();
-        if (img)
-            logger.log(Status.PASS, "Image is Present");
-        else
-            logger.log(Status.FAIL, "Image is not Present");
-        Assert.assertTrue(img);
-    }
 
-    @After
-
-    public void getResult() throws Exception {
-        logger = extent.createTest("getResult");
-        // Code pour obtenir le résultat du test
-        // Exemple de capture de screenshot en cas d'échec
-        String screenshotPath = "";
-        if (logger.getStatus() == Status.FAIL) {
-            screenshotPath = getScreenShot(driver, logger.getModel().getName());
-            logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
+    public static synchronized ExtentReports getInstance() {
+        if (extent == null) {
+            String reportPath = System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\extent.html";
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
+            extent = new ExtentReports();
+            extent.attachReporter(sparkReporter);
+            sparkReporter.config().setDocumentTitle("WatzzhubCpo");
+            sparkReporter.config().setReportName("Testing WatzzhubCpo");
+            sparkReporter.config().setTheme(Theme.DARK);
         }
+        return extent;
     }
+
+
 
 
     @AfterClass
@@ -90,13 +76,4 @@ public class ExtentReportsClass {
         driver.quit();
     }
 
-    public static String getScreenShot(WebDriver driver, String screenshotName) throws IOException {
-        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        String destination = System.getProperty("user.dir") + "/screenshots/" + screenshotName + dateName + ".png";
-        File finalDestination = new File(destination);
-        FileUtils.copyFile(source, finalDestination);
-        return destination;
-    }
 }

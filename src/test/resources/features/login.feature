@@ -8,10 +8,10 @@ Feature: gestion des utilisateurs
     And cliquer sur le boutton connexion
     Then se naviguer à la page Home
 
-  Scenario: arriver à la page user
-    Given cliquer sur user
-    Then se navigue à la page user
-    Given cliquer sur Create
+  Scenario: creer un utilisateur
+   Given cliquer sur user
+    When se navigue à la page user
+    Then cliquer sur Create
 
     When saisir nom
     When saisir prenom
@@ -19,7 +19,7 @@ Feature: gestion des utilisateurs
     When choisir langue
     When saisir numero de téléphone
 
-   Scenario: Se deconnecter
-     Given Cliquer sur userName
-     When cliquer sur signout
-     Then se naviguer vers page d'accueil
+
+
+  Scenario: Chercher voiture
+    Given cliquer sur cars

@@ -33,34 +33,11 @@ public class LoginPage {
         checkBox.click();
     }
 
-    public void se_connecter(){
+    public void se_connecter() {
         //btn de connexion
         WebElement signInButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("sign-in-button")));
         signInButton.click();
-
     }
-
-    public void se_naviguer() {
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, 20);
-
-            // Wait for the URL to contain the expected value
-            wait.until(ExpectedConditions.urlContains("tenants"));
-
-            // Get the actual URL after waiting
-            String actualUrl = getCurrentUrl();
-
-            // Print the actual URL for debugging
-            System.out.println("Actual URL: " + actualUrl);
-
-            // Assert that the URL matches the expected value
-           // Assert.assertTrue("Unexpected redirection URL", actualUrl.contains("tenants"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
 
 
 

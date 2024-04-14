@@ -10,71 +10,79 @@ import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pages.CreateUser;
 import pages.LoginPage;
+
 
 public class LoginTest extends TestBase {
 
     private LoginPage loginPage;
-    private CreateUser createUser;
+
 
     @Before
     public void beforeScenario() {
         // This method is executed before each scenario
         setUp();
-    }
+        loginPage = new LoginPage(driver);
+           }
+
+
 
     @Given("arriver à la page d'accueil")
     public void arriver_à_la_page_d_accueil() {
-        try {
-            driver.navigate().to("https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants");
-            loginPage = new LoginPage(driver);
-            createUser = new CreateUser(driver);
-        } catch (Exception e) {
-            System.out.println("Erreur lors de l'arrivée à la page d'accueil : " + e.getMessage());
-        }
+        driver.navigate().to("https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants");
+
     }
 
     @When("saisir adresse correctement")
     public void saisir_adresse_correctement() {
-        try {
-            loginPage.saisirEmail("rania.tritar@continuousnet.com");
-        } catch (Exception e) {
-            System.out.println("Erreur lors de la saisie de l'adresse : " + e.getMessage());
-        }
+        loginPage.saisirEmail("rania.tritar@continuousnet.com");
     }
 
-    // Ajoutez des blocs try-catch avec des messages d'erreur pour les autres étapes également
+    @When("saisir mot de passe correctement")
+    public void saisir_mot_de_passe_correctement() {
+        loginPage.saisirPassword("Rania.tritar123");
+    }
+
+    @When("cocher sur la case des conditions générales d'utilisateur")
+    public void cocher_sur_la_case_des_conditions_générales_d_utilisateur() {
+
+        loginPage.cocher();
+    }
+
+    @When("cliquer sur le boutton connexion")
+    public void cliquer_sur_le_boutton_connexion() {
+
+        loginPage.se_connecter();
+    }
+
 
     @Then("se naviguer à la page Home")
     public void se_naviguer_à_la_page_home() {
-        try {
-       loginPage.se_naviguer();
-        } catch (Exception e) {
-            System.out.println("Erreur lors de la navigation à la page Home : " + e.getMessage());
-        }
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+
+        // Wait for the URL to contain the expected value
+        wait.until(ExpectedConditions.urlContains("tenants"));
+
+        // Get the actual URL after waiting
+        String actualUrl = loginPage.getCurrentUrl();
+
+        // Print the actual URL for debugging
+        System.out.println("Actual URL: " + actualUrl);
+
+        // Assert that the URL matches the expected value
+        Assert.assertTrue("Unexpected redirection URL", actualUrl.contains("tenants"));
     }
 
-    @Given("cliquer sur user")
-    public void cliquer_sur_user() {
-        try {
-            createUser.CliquerUser();
-        } catch (Exception e) {
-            System.out.println("Erreur lors du clic sur user : " + e.getMessage());
-        }
-    }
 
-    @Then("se navigue à la page user")
-    public void se_navigue_à_la_page_user() {
-        try {
-            driver.navigate().to("https://cpo.beta.wattzhub.com/users#all");
-        } catch (Exception e) {
-            System.out.println("Erreur lors de la navigation à la page user : " + e.getMessage());
-        }
-    }
+
+
+
 
     @After
     public void afterScenario() {
+        // This method is executed after each scenario
         tearDown();
+
     }
+
 }
