@@ -17,7 +17,6 @@ Feature: gestion des utilisateurs
     When saisir prenom
     When saisir email
     When choisir langue
-    When saisir numero de téléphone
 
 
 
