@@ -9,43 +9,27 @@ import io.cucumber.java.en.When;
 import pages.CreateUser;
 
 public class UserTest extends TestBase {
-
     private CreateUser createUser;
+
+    public UserTest(CreateUser createUser) {
+        this.createUser = createUser;
+    }
 
     @Before
     public void beforeScenario() {
         // This method is executed before each scenario
-        createUser = new CreateUser(driver);
+        setUp();
     }
 
-    @Given("cliquer sur user")
-    public void cliquer_sur_user() {
-        createUser.CliquerUser();
-    }
-
-
-    @When( "se navigue à la page user")
-    public void se_navigue_à_la_page_user(){
-        driver.navigate().to("https://cpo.beta.wattzhub.com/users#all");
-
-    }
-    /* @Given("cliquer sur Create")
-     public void cliquer_sur_create() {
-         try {
-             createUser.CreateUser();
-         } catch (Exception e) {
-             System.out.println("Erreur lors de la création de l'utilisateur : " + e.getMessage());
-         }
-     }*/
-    @Then("cliquer sur Create")
-    public void cliquer_sur_create() throws InterruptedException {
-
-        try {createUser.CreateUser();}
-        catch (Exception e) {
+    @Given("cliquer sur Create")
+    public void cliquer_sur_create() {
+        try {
+            createUser.CreateUser();
+        } catch (Exception e) {
             System.out.println("Erreur lors de la création de l'utilisateur : " + e.getMessage());
         }
-
     }
+
     @When("saisir nom")
     public void saisir_nom() {
         try {
@@ -54,14 +38,15 @@ public class UserTest extends TestBase {
             System.out.println("Erreur lors de la saisie du nom : " + e.getMessage());
         }
     }
+
     @When("saisir prenom")
     public void saisir_prenom() {
-try {
-    createUser.SaisirFirstName("tesst");
-}catch (Exception e) {
-    System.out.println("Erreur lors de la saisie de prenom : " + e.getMessage());
-
-    }}
+        try {
+            createUser.SaisirFirstName("tesst");
+        } catch (Exception e) {
+            System.out.println("Erreur lors de la saisie du prénom : " + e.getMessage());
+        }
+    }
 
     @When("saisir email")
     public void saisir_email() {
@@ -108,4 +93,35 @@ try {
         }
     }
 
+    /*@When("saisir numero mobile")
+    public void saisir_numero_mobile() {
+        try {
+            createUser.SaisirMobile("0689899557");
+        } catch (Exception e) {
+            System.out.println("Erreur lors de la saisie du numéro mobile : " + e.getMessage());
+        }
+    }
+
+    @When("cliquer enregistrer")
+    public void cliquer_enregistrer() {
+        try {
+            createUser.Enregistrer();
+        } catch (Exception e) {
+            System.out.println("Erreur lors de l'enregistrement : " + e.getMessage());
+        }
+    }
+
+    /* @Then("le nouvel utilisateur est ajouté avec succès dans la liste des utilisateurs")
+     public void le_nouvel_utilisateur_est_ajouté_avec_succès_dans_la_liste_des_utilisateurs() {
+         try {
+             createUser.Verifier();
+         } catch (Exception e) {
+             System.out.println("Erreur lors de la vérification de l'utilisateur : " + e.getMessage());
+         }
+     }
+ */
+    @After
+    public void afterScenario() {
+        tearDown();
+    }
 }

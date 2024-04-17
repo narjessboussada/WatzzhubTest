@@ -23,3 +23,7 @@ Feature: gestion des utilisateurs
 
   Scenario: Chercher voiture
     Given cliquer sur cars
+
+
+  Scenario: Se deconnecter
+    Given Cliquer sur userName

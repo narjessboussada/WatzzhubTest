@@ -18,7 +18,8 @@ public class VoitureTest extends TestBase {
     }
 
     @Given("cliquer sur cars")
-    public void cliquer_sur_cars() {
+    public void cliquer_sur_cars() throws InterruptedException {
+        Thread.sleep(5000);
         cars.CliquerCars();
     }
 }

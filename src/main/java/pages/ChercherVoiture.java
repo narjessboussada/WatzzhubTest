@@ -23,7 +23,7 @@ public class ChercherVoiture {
     }
 
 
-    public String getCurrentUrll() {
+    public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
 
