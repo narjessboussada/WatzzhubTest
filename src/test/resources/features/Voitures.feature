@@ -12,5 +12,6 @@ Feature: Cars
       Given cliquer sur cars
       When se navigue à la page cars
       And cliquer sur Car Makers
-     # And chocher un modele
-     # And Cliquer Ok
+      And chocher un modele
+      And Cliquer Ok
+

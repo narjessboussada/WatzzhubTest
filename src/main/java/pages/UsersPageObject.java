@@ -67,4 +67,9 @@ public class UsersPageObject {
         element.clear();
         element.sendKeys(phoneNumber);
     }
+
+    public void enregistrer(){
+        WebElement enregistrer = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".cdk-focused .mat-icon")));
+        enregistrer.click();
+    }
 }

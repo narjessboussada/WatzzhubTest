@@ -33,13 +33,11 @@ public class CarsStepDefinitions {
     }
     @When("chocher un modele")
     public void chocher_un_modele() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    carsPageObject.ChoisirModele();
     }
     @When("Cliquer Ok")
     public void cliquer_ok() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        carsPageObject.CliquerOk();
     }
 
 

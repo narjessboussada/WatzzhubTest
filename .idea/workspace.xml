@@ -5,32 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f7ad43b-8a8f-4be9-940d-a4279e51dd40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/LogoutPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Logout.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/test1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChercherVoiture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CreateOrganization.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CreateUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/extentreport/ExtentReports.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/extentreport/ExtentReportsClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/extentreport/ExtentTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/CucumberRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/LoginTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/OrganizationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/UserTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/VoitureTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/executables/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/executables/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Users.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Users.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +138,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713609129675</updated>
-      <workItem from="1713609130759" duration="8772000" />
+      <workItem from="1713609130759" duration="13043000" />
     </task>
     <servers />
   </component>

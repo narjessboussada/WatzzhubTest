@@ -19,6 +19,10 @@ When se navigue à la page user
     When saisir email
     When choisir langue
     When saisir numero de téléphone
+    Then cliquer enregistrer
 
+    @delete_user
+    Scenario: supprimer un utilisateur
+        When cliquer sur les trois points
 
 

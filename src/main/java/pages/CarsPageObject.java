@@ -27,4 +27,14 @@ public class CarsPageObject {
 
     }
 
+    public void ChoisirModele(){
+        WebElement Modele = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-checkbox-4 .mat-checkbox-inner-container")));
+        Modele.click();
+    }
+
+    public void CliquerOk(){
+        WebElement enregistrer = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-dialog-0 > ng-component > div > div > div > button:nth-child(1) > span.mat-button-wrapper > mat-icon")));
+        enregistrer.click();
+
+    }
 }

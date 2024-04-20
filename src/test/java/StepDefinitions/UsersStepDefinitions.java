@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.UsersPageObject;
 
@@ -101,8 +102,10 @@ public class UsersStepDefinitions {
             System.out.println("Erreur lors de la saisie du numéro de téléphone : " + e.getMessage());
         }
     }
+    @Then("cliquer enregistrer")
+    public void cliquer_enregistrer() {
 
-
-
+        usersPageObject.enregistrer();
+    }
 
 }
