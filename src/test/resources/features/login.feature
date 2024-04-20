@@ -1,6 +1,7 @@
-Feature: gestion des utilisateurs
+Feature: Login
 
-  Background:
+  @login
+  Scenario: s'authentifier en tant qu'un utilisateur normal
     Given arriver à la page d'accueil
     When saisir adresse correctement
     And saisir mot de passe correctement
@@ -8,22 +9,3 @@ Feature: gestion des utilisateurs
     And cliquer sur le boutton connexion
     Then se naviguer à la page Home
 
-  Scenario: creer un utilisateur
-   Given cliquer sur user
-    When se navigue à la page user
-    Then cliquer sur Create
-
-    When saisir nom
-    When saisir prenom
-    When saisir email
-    When choisir langue
-    When saisir numero de téléphone
-
-
-
-  Scenario: Chercher voiture
-    Given cliquer sur cars
-
-
-  Scenario: Se deconnecter
-    Given Cliquer sur userName

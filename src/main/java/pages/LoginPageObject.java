@@ -6,24 +6,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class  LoginPage {
+public class LoginPageObject {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, 120);
+    public LoginPageObject(WebDriver _driver) {
+        this.driver = _driver;
+        this.wait = new WebDriverWait(driver, 60);
     }
 
     public void saisirEmail(String username) {
         WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(By.id("email-field")));
-        emailField.click();
         emailField.clear();
         emailField.sendKeys(username);
     }
+
     public void saisirPassword(String password) {
         WebElement passwordField = wait.until(ExpectedConditions.elementToBeClickable(By.id("password-field")));
-        passwordField.click();
         passwordField.clear();
         passwordField.sendKeys(password);
     }
@@ -34,19 +33,15 @@ public class  LoginPage {
     }
 
     public void se_connecter() {
-        //btn de connexion
         WebElement signInButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("sign-in-button")));
         signInButton.click();
     }
 
+    public boolean isHomePage() {
+        return wait.until(ExpectedConditions.urlContains("tenants"));
+    }
 
-
-
-    // Méthode pour obtenir l'URL actuelle
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
-
-
-
 }
