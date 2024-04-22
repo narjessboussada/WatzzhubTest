@@ -68,8 +68,33 @@ public class UsersPageObject {
         element.sendKeys(phoneNumber);
     }
 
-    public void enregistrer(){
+    public void enregistrer() {
         WebElement enregistrer = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".cdk-focused .mat-icon")));
         enregistrer.click();
     }
+
+
+    //supp un user
+
+
+    public void iClickOnTheDeleteButtonForTheUser(String username) {
+        // Localiser le bouton de suppression pour l'utilisateur spécifié
+        WebElement deleteButton = driver.findElement(By.xpath("//tr[contains(.,'" + username + "')]/td/button[@class='delete-button']"));
+        // Cliquer sur le bouton de suppression
+        deleteButton.click();
+        // Vous pourriez avoir besoin de gérer les boîtes de dialogue de confirmation ici
+    }
+
+    public void Cliquer(){
+        WebElement points = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#\\30  > td.action-cell.text-center.align-middle.ng-star-inserted > button")));
+        points.click();
+
+    }
+
+    public void Cliquer_Supprimer(){
+        WebElement delete = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-menu-panel-0 > div > div > button")));
+        delete.click();
+
+    }
+
 }

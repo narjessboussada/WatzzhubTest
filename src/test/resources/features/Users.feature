@@ -23,6 +23,11 @@ When se navigue à la page user
 
     @delete_user
     Scenario: supprimer un utilisateur
-        When cliquer sur les trois points
+        Given cliquer user
+        When arriver à la page user
+      #  When chercher le user
+       # And cliquer sur les trois boutons
+        #And cliquer sur supprimer
+        #Then l'utilisateur doit supprimer avec succès
 
 

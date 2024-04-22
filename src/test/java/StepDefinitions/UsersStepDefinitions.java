@@ -3,7 +3,10 @@ package StepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.UsersPageObject;
+
 
 public class UsersStepDefinitions {
     private UsersPageObject usersPageObject;
@@ -107,5 +110,46 @@ public class UsersStepDefinitions {
 
         usersPageObject.enregistrer();
     }
+
+    //supp user
+
+    @Given("cliquer user")
+    public void cliquer_user() {
+        try {
+            usersPageObject.CliquerUser();
+        } catch (Exception e) {
+            System.out.println("Echec lors de clique sur l'utilisateur: " + e.getMessage());
+        }
+    }
+    @When("arriver à la page user")
+    public void arriver_à_la_page_user() {
+        try {
+            CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/users#all");
+            Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
+        } catch (Exception e) {
+            System.out.println("Impossible d'atteindre la page des utilisateurs: " + e.getMessage());
+        }
+    }
+
+    @When("chercher le user")
+    public void chercher_le_user (String username) {
+          usersPageObject.iClickOnTheDeleteButtonForTheUser("tesst");
+        }
+
+
+    @When("cliquer sur les trois boutons")
+    public void cliquer_sur_les_trois_boutons() {
+        usersPageObject.Cliquer();
+    }
+    @When("cliquer sur supprimer")
+    public void cliquer_sur_supprimer() {
+        usersPageObject.Cliquer_Supprimer();
+    }
+    @Then("l'utilisateur doit supprimer avec succès")
+    public void l_utilisateur_doit_supprimer_avec_succès() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 
 }
