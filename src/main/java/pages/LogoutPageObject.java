@@ -1,6 +1,5 @@
 package pages;
 
-import com.aventstack.extentreports.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,14 +27,8 @@ public class LogoutPageObject {
     }
 
 
-        public void utilisateurEstDéconnecté() {
-            WebElement loginForm = driver.findElement(By.cssSelector("body > app-root > app-layout > app-authentication-login > div > div > div > div > div.col-md-9.col-xs-12.col-sm-12.auth_form.p-3 > div.container-fluid.p-3 > div:nth-child(1) > h2")); // Supposons que votre formulaire de connexion ait l'ID "loginForm"
-            if (loginForm.isDisplayed()) {
-                System.out.println("L'utilisateur est déconnecté avec succès.");
-            } else {
-                System.out.println("Échec de la déconnexion de l'utilisateur.");
-            }
-            driver.quit();
+        public Boolean utilisateurEstDéconnecté() {
+            return wait.until(ExpectedConditions.urlToBe("https://cpo.beta.wattzhub.com/auth/login"));
 
         }
     }

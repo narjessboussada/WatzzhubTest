@@ -10,6 +10,6 @@ Feature: logout
 
     @logout
     Scenario: se deconnecter
-      Given Cliquer sur userName
+      When Cliquer sur userName
       When cliquer sur signout
-     #Then se naviguer vers page d'accueil
+      Then se naviguer vers page d'accueil

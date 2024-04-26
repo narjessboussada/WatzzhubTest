@@ -3,6 +3,7 @@ package StepDefinitions;
 import com.aventstack.extentreports.Status;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.CarsPageObject;
 
@@ -56,7 +57,7 @@ public class CarsStepDefinitions {
         }
     }
 
-    @When("Cliquer Ok")
+    @Then("Cliquer Ok")
     public void cliquer_ok() {
         try {
             carsPageObject.CliquerOk();

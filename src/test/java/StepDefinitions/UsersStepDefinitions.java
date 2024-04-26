@@ -76,7 +76,7 @@ public class UsersStepDefinitions {
     @When("saisir email")
     public void saisir_email() {
         try {
-            usersPageObject.SaisirEmail("testt1@gmail.com");
+            usersPageObject.SaisirEmail("testttttt1@gmail.com");
             test.log(Status.PASS, " saisir email");
         } catch (Exception e) {
             test.log(Status.FAIL,
