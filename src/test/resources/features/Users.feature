@@ -10,10 +10,10 @@ Then se naviguer à la page Home
 
   @user
 Scenario: creer un utilisateur
-Given cliquer sur user
+When cliquer sur user
 When se navigue à la page user
 
-    Given cliquer sur Create
+    When cliquer sur Create
     When saisir nom
     When saisir prenom
     When saisir email

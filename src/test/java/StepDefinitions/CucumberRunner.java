@@ -1,5 +1,8 @@
 package StepDefinitions;
 
+import ExtentReport.ExtentManager;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -14,13 +17,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
         features = "src/test/resources/features",
         glue = "StepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports"},
-        tags = " @delete_user"
+        tags = "   @cars"
 )
 public class CucumberRunner {
         public static final String TEST_SITE_URL = "https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants";
         private static final String CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/src/test/resources/executables/chromedriver.exe";
         private static WebDriver driver;
         private static WebDriverWait wait;
+        public static ExtentTest test ;
 
         @BeforeClass
         public static void setup(){
@@ -28,15 +32,19 @@ public class CucumberRunner {
                 driver = new ChromeDriver();
                 wait = new WebDriverWait(driver, 60);
                 driver.manage().window().maximize();
+                ExtentReports extent = ExtentManager.getInstance();
+                if (test == null) {
+                        test = extent.createTest(CucumberRunner.class.getSimpleName());
+                }
         }
 
         @AfterClass
         public static void tearDown(){
            //     if(driver != null){
                   //      driver.quit();
-           //     }
+                ExtentManager.getInstance().flush();
+                          //     }
         }
-
         public static WebDriver getDriver() {
             return driver;
         }

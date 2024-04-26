@@ -1,11 +1,14 @@
 package StepDefinitions;
 
+import com.aventstack.extentreports.Status;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.UsersPageObject;
+
+import static StepDefinitions.CucumberRunner.test;
 
 
 public class UsersStepDefinitions {
@@ -15,12 +18,12 @@ public class UsersStepDefinitions {
         this.usersPageObject = new UsersPageObject(CucumberRunner.getDriver());
     }
 
-    @Given("cliquer sur user")
+    @When("cliquer sur user")
     public void cliquer_sur_user() {
         try {
             usersPageObject.CliquerUser();
         } catch (Exception e) {
-            System.out.println("Echec lors de clique sur l'utilisateur: " + e.getMessage());
+            System.out.println("Impossible de cliquer sur user: " + e.getMessage());
         }
     }
 
@@ -34,12 +37,15 @@ public class UsersStepDefinitions {
         }
     }
 
-    @Given("cliquer sur Create")
+    @When("cliquer sur Create")
     public void cliquer_sur_create() {
         try {
             usersPageObject.CreateUser();
+            test.log(Status.PASS, "cliquer sur Create");
         } catch (Exception e) {
-            System.out.println("Erreur lors de la création de l'utilisateur: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de cliquer sur Create. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de cliquer sur Create.", e);
         }
     }
 
@@ -47,8 +53,11 @@ public class UsersStepDefinitions {
     public void saisir_nom() {
         try {
             usersPageObject.SaisirName("test");
+            test.log(Status.PASS, " saisir nom");
         } catch (Exception e) {
-            System.out.println("Erreur lors de la saisie du nom : " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de saisir nom. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de saisir nom.", e);
         }
     }
 
@@ -56,17 +65,23 @@ public class UsersStepDefinitions {
     public void saisir_prenom() {
         try {
             usersPageObject.SaisirFirstName("tesst");
+            test.log(Status.PASS, " saisir prenom");
         } catch (Exception e) {
-            System.out.println("Erreur lors de la saisie du prénom : " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de saisir prenom. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de saisir prenom.", e);
         }
     }
 
     @When("saisir email")
     public void saisir_email() {
         try {
-            usersPageObject.SaisirEmail("test@gmail.com");
+            usersPageObject.SaisirEmail("testt1@gmail.com");
+            test.log(Status.PASS, " saisir email");
         } catch (Exception e) {
-            System.out.println("Erreur lors de la saisie de l'email : " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de saisir email. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de saisir email.", e);
         }
     }
 
@@ -74,8 +89,11 @@ public class UsersStepDefinitions {
     public void choisir_langue() {
         try {
             usersPageObject.ChoisirLangue();
+            test.log(Status.PASS, " choisir langue");
         } catch (Exception e) {
-            System.out.println("Erreur lors du choix de la langue : " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de choisir langue. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de choisir langue.", e);
         }
     }
 
@@ -83,34 +101,48 @@ public class UsersStepDefinitions {
     public void choisir_statut() {
         try {
             usersPageObject.ChoisirStatut();
+            test.log(Status.PASS, "Choisir statut");
         } catch (Exception e) {
-            System.out.println("Erreur lors du choix du statut : " + e.getMessage());
-        }
+            test.log(Status.FAIL,
+                    "Impossible de Choisir statut. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de Choisir statut.", e);        }
     }
 
     @When("choisir role")
     public void choisir_role() {
         try {
             usersPageObject.ChoisirRole();
+            test.log(Status.PASS, "Choisir role");
         } catch (Exception e) {
-            System.out.println("Erreur lors du choix du rôle : " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de choisir un role. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de choisir un role.", e);        }
         }
-    }
+
 
     @When("saisir numero de téléphone")
     public void saisir_numero_de_téléphone() {
         try {
             usersPageObject.SaisirNumeroTelephone("0689899557");
+            test.log(Status.PASS, "Saisir le numéro de téléphone");
         } catch (Exception e) {
-            System.out.println("Erreur lors de la saisie du numéro de téléphone : " + e.getMessage());
-        }
+            test.log(Status.FAIL,
+                    "Impossible de saisir le numéro de telephone. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible saisir le numéro de telephone.", e);        }
     }
     @Then("cliquer enregistrer")
     public void cliquer_enregistrer() {
+        try {
+            usersPageObject.enregistrer();
+            test.log(Status.PASS, "Appuyez Entrée dans le champ du nom de l'utilisateur pour l'enregistrer");
 
-        usersPageObject.enregistrer();
+        } catch(Exception e){
+            test.log(Status.FAIL,
+                    "Impossible d'appuyer sur Entrée dans le champ du nom de l'utilisateur. Détails des exceptions: " + e.getMessage());
+
+            throw new RuntimeException("Impossible d'appuyer sur Entrée dans le champ du nom de l'utilisateur.", e);
+        }
     }
-
     //supp user
 
     @Given("cliquer user")

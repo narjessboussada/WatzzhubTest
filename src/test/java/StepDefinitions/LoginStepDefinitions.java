@@ -1,10 +1,13 @@
 package StepDefinitions;
 
+import com.aventstack.extentreports.Status;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.LoginPageObject;
+
+import static StepDefinitions.CucumberRunner.test;
 
 public class LoginStepDefinitions {
 
@@ -28,8 +31,11 @@ public class LoginStepDefinitions {
     public void saisir_adresse_correctement() {
         try {
             loginPageObject.saisirEmail("rania.tritar@continuousnet.com");
+            test.log(Status.PASS, "saisir adresse correctement");
         } catch (Exception e) {
-            System.out.println("Erreur lors du saisie de l'adresse mail: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de saisir adresse correctement. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de saisir adresse correctement.", e);
         }
     }
 
@@ -37,20 +43,26 @@ public class LoginStepDefinitions {
     public void saisir_mot_de_passe_correctement() {
         try {
             loginPageObject.saisirPassword("Rania.tritar123");
+            test.log(Status.PASS, "saisir mot de passe correctement");
         } catch (Exception e) {
-            System.out.println("Erreur lors du saisie de mot de passe: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible desaisir mot de passe correctement. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de saisir mot de passe correctement.", e);
         }
-    }
+        }
+
 
     @When("cocher sur la case des conditions générales d'utilisateur")
     public void cocher_sur_la_case_des_conditions_générales_d_utilisateur() {
         try {
             loginPageObject.cocher();
+            test.log(Status.PASS, "cocher sur la case des conditions générales d'utilisateur");
         } catch (Exception e) {
-            System.out.println("Erreur lors de clique sur la case des conditions générales: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible desaisir mot de passe correctement. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de cocher sur la case des conditions générales d'utilisateur.", e);
         }
     }
-
     @When("cliquer sur le boutton connexion")
     public void cliquer_sur_le_boutton_connexion() {
         try {

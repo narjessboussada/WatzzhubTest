@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -69,8 +70,9 @@ public class UsersPageObject {
     }
 
     public void enregistrer() {
-        WebElement enregistrer = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".cdk-focused .mat-icon")));
-        enregistrer.click();
+        WebElement Field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"mat-input-3\"]")));
+        Field.click();
+        Field.sendKeys(Keys.ENTER);
     }
 
 

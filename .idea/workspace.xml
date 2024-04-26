@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f7ad43b-8a8f-4be9-940d-a4279e51dd40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExtentReport/SparkReporterConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExtentReport/SparkReporterFilterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExtentReport/SparkReporterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ExtentReport/ExtentManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentReport/SparkReporterConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentReport/SparkReporterFilterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentReport/SparkReporterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentReport/SparkTagTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Users.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Users.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -42,24 +49,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Scenario: s'authentifier en tant qu'un utilisateur normal.executor": "Run",
-    "Cucumber Java.Scenario: se deconnecter.executor": "Run",
-    "Cucumber Java.Scenario: supprimer un utilisateur.executor": "Run",
-    "JUnit.CucumberRunner.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USER/Desktop/Wattzhubcpo/project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Scenario: s'authentifier en tant qu'un utilisateur normal.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: se deconnecter.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: supprimer un utilisateur.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CucumberRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/Desktop/Wattzhubcpo/project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.CucumberRunner">
     <configuration name="Scenario: s'authentifier en tant qu'un utilisateur normal" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
@@ -162,7 +169,15 @@
       <updated>1713609129675</updated>
       <workItem from="1713609130759" duration="14972000" />
       <workItem from="1713791428253" duration="260000" />
-      <workItem from="1713814885578" duration="5111000" />
+      <workItem from="1713814885578" duration="6747000" />
+      <workItem from="1713904269699" duration="64000" />
+      <workItem from="1713904347870" duration="141000" />
+      <workItem from="1713904500826" duration="1119000" />
+      <workItem from="1713951788653" duration="11000" />
+      <workItem from="1714059291531" duration="4048000" />
+      <workItem from="1714120183643" duration="1058000" />
+      <workItem from="1714121261534" duration="1909000" />
+      <workItem from="1714123197796" duration="3993000" />
     </task>
     <servers />
   </component>
