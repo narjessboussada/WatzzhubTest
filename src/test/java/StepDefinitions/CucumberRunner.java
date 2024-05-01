@@ -11,13 +11,14 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.io.IOException;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "StepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports"},
-        tags = " "
+        tags = "@carsDetails "
 )
 public class CucumberRunner {
         public static final String TEST_SITE_URL = "https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants";
@@ -27,7 +28,7 @@ public class CucumberRunner {
         public static ExtentTest test ;
 
         @BeforeClass
-        public static void setup(){
+        public static void setup() throws IOException, InterruptedException {
                 System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
                 driver = new ChromeDriver();
                 wait = new WebDriverWait(driver, 60);
@@ -39,11 +40,11 @@ public class CucumberRunner {
         }
 
         @AfterClass
-        public static void tearDown(){
+        public static void tearDown() throws IOException, InterruptedException {
            //     if(driver != null){
                   //      driver.quit();
                 ExtentManager.getInstance().flush();
-                          //     }
+                      //     }
         }
         public static WebDriver getDriver() {
             return driver;

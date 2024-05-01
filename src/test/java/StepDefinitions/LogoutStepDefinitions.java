@@ -1,13 +1,16 @@
 package StepDefinitions;
 
 import com.aventstack.extentreports.Status;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import pages.LoginPageObject;
 import pages.LogoutPageObject;
-
+import com.aventstack.extentreports.MediaEntityBuilder;
 import static StepDefinitions.CucumberRunner.test;
 
 public class LogoutStepDefinitions {
@@ -22,16 +25,16 @@ public class LogoutStepDefinitions {
     public void cliquer_sur_user_name() {
          try {
         logoutPageObject.CliquerUser();
-        test.log(Status.PASS, "Cliquer sur userName");
-        }catch(Exception e) {
-          test.log(Status.FAIL,
-          "Impossible de Cliquer sur userName. Détails des exceptions: " + e.getMessage());
-        throw new RuntimeException("Impossible de Cliquer sur userName.", e);
+             test.log(Status.PASS, "Cliquer sur userName");
+         } catch (Exception e) {
+             test.log(Status.FAIL,
+                     "Impossible de Cliquer sur userName. Détails des exceptions: " + e.getMessage());
+             throw new RuntimeException("Impossible de Cliquer sur userName.", e);
          }
     }
 
-    @When("cliquer sur signout")
-    public void cliquer_sur_signout() {
+    @When("cliquer sur le bouton signout")
+    public void cliquer_sur_le_bouton_signout() {
         try {
             logoutPageObject.Se_deconnecter();
             test.log(Status.PASS, "cliquer sur signout");
@@ -41,6 +44,7 @@ public class LogoutStepDefinitions {
             throw new RuntimeException("Impossible de cliquer sur signout.", e);
         }
     }
+
 
     @When("se naviguer vers page d'accueil")
     public void se_naviguer_vers_page_d_accueil() {

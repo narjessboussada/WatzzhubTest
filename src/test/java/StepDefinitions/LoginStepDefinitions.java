@@ -27,8 +27,8 @@ public class LoginStepDefinitions {
         }
     }
 
-    @When("saisir adresse correctement")
-    public void saisir_adresse_correctement() {
+    @When("saisir l'adresse correctement")
+    public void saisir_l_adresse_correctement() {
         try {
             loginPageObject.saisirEmail("rania.tritar@continuousnet.com");
             test.log(Status.PASS, "saisir adresse correctement");
@@ -39,8 +39,8 @@ public class LoginStepDefinitions {
         }
     }
 
-    @When("saisir mot de passe correctement")
-    public void saisir_mot_de_passe_correctement() {
+    @When("saisir le mot de passe correctement")
+    public void saisir_le_mot_de_passe_correctement() {
         try {
             loginPageObject.saisirPassword("Rania.tritar123");
             test.log(Status.PASS, "saisir mot de passe correctement");

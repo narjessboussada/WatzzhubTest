@@ -16,6 +16,11 @@ public class CarsPageObject {
         this.wait = new WebDriverWait(driver, 60);
     }
 
+
+    public void naviguer(){
+      /*  CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/cars#cars");
+        Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)*/
+    }
     public void Cars() {
         WebElement cars = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > app-root > app-layout > div > div.sidebar > app-sidebar-cmp > div.sidebar-wrapper > ul > li:nth-child(2) > a > p")));
         cars.click();
@@ -35,6 +40,33 @@ public class CarsPageObject {
     public void CliquerOk(){
         WebElement enregistrer = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-dialog-0 > ng-component > div > div > div > button:nth-child(1) > span.mat-button-wrapper > mat-icon")));
         enregistrer.click();
+
+    }
+
+
+    //detail voiture
+
+    public void cliquer_icone(){
+        WebElement oeil = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#\\30  > td.action-cell.text-center.align-middle.ng-star-inserted > div > button")));
+        oeil.click();
+
+    }
+
+    public Boolean verifier() {
+        WebElement imageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[src='" +" https://beta.cpo.server.wattzhub.com:443/v1/util/car-catalogs/1261/image?LastChangedOn=2023-01-05T10:47:16.363Z" + "']")));
+        return imageElement.isDisplayed();
+
+    }
+
+
+    public void batterie(){
+        WebElement batterie = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-tab-label-3-1 .ng-star-inserted:nth-child(2)")));
+        batterie.click();
+
+    }
+    public void fermer(){
+        WebElement fermer = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-dialog-0 > ng-component > app-car-catalog > div > div > div > button")));
+        fermer.click();
 
     }
 }
