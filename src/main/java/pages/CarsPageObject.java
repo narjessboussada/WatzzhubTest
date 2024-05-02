@@ -6,10 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class CarsPageObject {
 
     private WebDriver driver;
     private WebDriverWait wait;
+    private DriverManager CucumberRunner;
 
     public CarsPageObject(WebDriver _driver) {
         this.driver = _driver;
@@ -17,9 +21,9 @@ public class CarsPageObject {
     }
 
 
-    public void naviguer(){
-      /*  CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/cars#cars");
-        Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)*/
+    public void naviguer() throws InterruptedException, SQLException {
+     /// CucumberRunner.getDriver("https://cpo.beta.wattzhub.com/cars#cars");
+        //Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
     }
     public void Cars() {
         WebElement cars = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > app-root > app-layout > div > div.sidebar > app-sidebar-cmp > div.sidebar-wrapper > ul > li:nth-child(2) > a > p")));
@@ -45,7 +49,6 @@ public class CarsPageObject {
 
 
     //detail voiture
-
     public void cliquer_icone(){
         WebElement oeil = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#\\30  > td.action-cell.text-center.align-middle.ng-star-inserted > div > button")));
         oeil.click();
@@ -60,8 +63,18 @@ public class CarsPageObject {
 
 
     public void batterie(){
-        WebElement batterie = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-tab-label-3-1 .ng-star-inserted:nth-child(2)")));
+        WebElement batterie = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-tab-label-1-1")));
         batterie.click();
+
+    }
+
+    public void image(){
+        WebElement image = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-tab-label-1-2")));
+        image.click();
+    }
+    public void miscellaneous(){
+        WebElement image = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-tab-label-1-3")));
+        image.click();
 
     }
     public void fermer(){
@@ -69,4 +82,20 @@ public class CarsPageObject {
         fermer.click();
 
     }
+
+    //Chercher voiture en saissant le modele
+
+    public void Marque(String marque){
+        WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-input-0")));
+        emailField.clear();
+        emailField.sendKeys(marque);
+
+    }
+
+    public void reset(){
+        WebElement reset = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"mat-tab-content-0-0\"]/div/app-car-catalogs-list/app-table/div/div[1]/div[1]/div[2]/button")));
+        reset.click();
+
+    }
+
 }

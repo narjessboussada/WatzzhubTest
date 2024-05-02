@@ -8,7 +8,7 @@ Feature: Cars
     Then se naviguer à la page Home
 
     @cars
-    Scenario: Chercher une voiture
+    Scenario: filtrer une voiture
       Given cliquer sur le bouton cars
       Then Se navigue à la page cars
 
@@ -24,6 +24,17 @@ Feature: Cars
 
         Given cliquer sur l'icone oeil
         #Then afficher les détails du voiture
-        #When Cliquer sur l'icone batterie
-        #And Cliquer sur l'icone pictures
+        When Cliquer sur l'icone batterie
+        And Cliquer sur l'icone pictures
+        And Cliquer sur l'icone miscellaneous
         And cliquer sur l'icone fermer
+
+      @Reset
+      Scenario: chercher une voiture
+        Given cliquer sur le bouton cars
+        Then Se navigue à la page cars
+
+        When saisir une marque de voiture
+        #Then Afficher la liste filtrée
+        When Cliquer sur le bouton reset
+        #Then Afficher l'ancienne liste

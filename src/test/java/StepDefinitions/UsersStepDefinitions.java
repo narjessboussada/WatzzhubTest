@@ -4,8 +4,6 @@ import com.aventstack.extentreports.Status;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.UsersPageObject;
 
 import static StepDefinitions.CucumberRunner.test;
@@ -22,8 +20,11 @@ public class UsersStepDefinitions {
     public void cliquer_sur_user() {
         try {
             usersPageObject.CliquerUser();
+            test.log(Status.PASS, "cliquer sur user");
         } catch (Exception e) {
-            System.out.println("Impossible de cliquer sur user: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de cliquer sur user. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de cliquer sur user.", e);
         }
     }
 
@@ -32,14 +33,17 @@ public class UsersStepDefinitions {
         try {
             CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/users#all");
             Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
+            test.log(Status.PASS, "se navigue à la page user");
         } catch (Exception e) {
-            System.out.println("Impossible d'atteindre la page des utilisateurs: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de se navigue à la page user. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible se navigue à la page user.", e);
         }
     }
 
     @When("cliquer sur Create")
     public void cliquer_sur_create() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.CreateUser();
             test.log(Status.PASS, "cliquer sur Create");
         } catch (Exception e) {
@@ -51,7 +55,7 @@ public class UsersStepDefinitions {
 
     @When("saisir nom")
     public void saisir_nom() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.SaisirName("test");
             test.log(Status.PASS, " saisir nom");
         } catch (Exception e) {
@@ -63,7 +67,7 @@ public class UsersStepDefinitions {
 
     @When("saisir prenom")
     public void saisir_prenom() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.SaisirFirstName("tesst");
             test.log(Status.PASS, " saisir prenom");
         } catch (Exception e) {
@@ -75,7 +79,7 @@ public class UsersStepDefinitions {
 
     @When("saisir email")
     public void saisir_email() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.SaisirEmail("testttttt1@gmail.com");
             test.log(Status.PASS, " saisir email");
         } catch (Exception e) {
@@ -87,7 +91,7 @@ public class UsersStepDefinitions {
 
     @When("choisir langue")
     public void choisir_langue() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.ChoisirLangue();
             test.log(Status.PASS, " choisir langue");
         } catch (Exception e) {
@@ -99,7 +103,7 @@ public class UsersStepDefinitions {
 
     @When("choisir statut")
     public void choisir_statut() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.ChoisirStatut();
             test.log(Status.PASS, "Choisir statut");
         } catch (Exception e) {
@@ -110,7 +114,7 @@ public class UsersStepDefinitions {
 
     @When("choisir role")
     public void choisir_role() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.ChoisirRole();
             test.log(Status.PASS, "Choisir role");
         } catch (Exception e) {
@@ -122,7 +126,7 @@ public class UsersStepDefinitions {
 
     @When("saisir numero de téléphone")
     public void saisir_numero_de_téléphone() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.SaisirNumeroTelephone("0689899557");
             test.log(Status.PASS, "Saisir le numéro de téléphone");
         } catch (Exception e) {
@@ -132,14 +136,12 @@ public class UsersStepDefinitions {
     }
     @Then("cliquer enregistrer")
     public void cliquer_enregistrer() {
-        try {
+        try {Thread.sleep(3000);
             usersPageObject.enregistrer();
             test.log(Status.PASS, "Appuyez Entrée dans le champ du nom de l'utilisateur pour l'enregistrer");
-
         } catch(Exception e){
             test.log(Status.FAIL,
                     "Impossible d'appuyer sur Entrée dans le champ du nom de l'utilisateur. Détails des exceptions: " + e.getMessage());
-
             throw new RuntimeException("Impossible d'appuyer sur Entrée dans le champ du nom de l'utilisateur.", e);
         }
     }

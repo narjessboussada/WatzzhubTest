@@ -1,17 +1,26 @@
 package StepDefinitions;
 
+import ExtentReport.ExtentManager;
+import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CarsPageObject;
 
+import java.io.IOException;
 import static StepDefinitions.CucumberRunner.test;
 
 public class CarsStepDefinitions {
 
     private CarsPageObject carsPageObject;
+
+
 
     public CarsStepDefinitions() {
         this.carsPageObject = new CarsPageObject(CucumberRunner.getDriver());
@@ -19,15 +28,23 @@ public class CarsStepDefinitions {
 
     @Given("cliquer sur le bouton cars")
     public void cliquer_sur_le_bouton_cars() {
-        carsPageObject.Cars();
+        try{
+            carsPageObject.Cars();
+        test.log(Status.PASS, "cliquer sur le bouton cars");
+    } catch (Exception e) {
+        test.log(Status.FAIL,
+                "Impossible de cliquer sur le bouton cars. Détails des exceptions: " + e.getMessage());
+        throw new RuntimeException("Impossible de cliquer sur le bouton cars.", e);
+    }
     }
 
     @When("Se navigue à la page cars")
     public void se_navigue_à_la_page_cars() {
         try {
             //methode okhra
-            CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/cars#cars");
-            Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
+           CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/cars#cars");
+            //carsPageObject.naviguer();
+            //Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
         } catch (Exception e) {
             System.out.println("Impossible d'atteindre la page des voitures: " + e.getMessage());
         }
@@ -86,9 +103,9 @@ public class CarsStepDefinitions {
 
             @Then("afficher les détails du voiture")
             public void afficher_les_détails_du_voiture() {
-                try {
+                try {Thread.sleep(3000);
                carsPageObject.verifier();
-                }
+                    test.log(Status.PASS, "afficher les détails du voiture");}
                 catch(Exception e){
                     test.log(Status.FAIL,
                             "Impossible d'afficher les détails du voiture. Détails des exceptions: " + e.getMessage());
@@ -98,43 +115,70 @@ public class CarsStepDefinitions {
 
     @When("Cliquer sur l'icone batterie")
     public void cliquer_sur_l_icone_batterie() {
-        try {
+        try {Thread.sleep(3000);
             carsPageObject.batterie();
+            test.log(Status.PASS, "Cliquer sur l'icone batterie");}
+        catch(Exception e){
+            test.log(Status.FAIL,
+                    "Impossible de cliquer sur l'icone batterie. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible cliquer sur l'icone batterie.", e);
         }
-                catch(Exception e){
-        test.log(Status.FAIL,
-                "Impossible de cliquer sur l'icone batterie. Détails des exceptions: " + e.getMessage());
-        throw new RuntimeException("Impossible de cliquer sur l'icone batterie.", e);
-    }
     }
 
          @When("Cliquer sur l'icone pictures")
         public void cliquer_sur_l_icone_pictures(){
-             try {
-
-             }
+             try {Thread.sleep(3000);
+                 carsPageObject.image();
+                 test.log(Status.PASS, "Cliquer sur l'icone pictures");}
              catch(Exception e){
                  test.log(Status.FAIL,
                          "Impossible de cliquer sur l'icone pictures. Détails des exceptions: " + e.getMessage());
-                 throw new RuntimeException("Impossible de cliquer sur l'icone pictures.", e);
-             }
+                 throw new RuntimeException("Impossible de cliquer sur l'icone pictures.",e);
+         }}
 
-
-    }
+        @When("Cliquer sur l'icone miscellaneous")
+        public void cliquer_sur_l_icone_miscellaneous(){
+            try {
+                Thread.sleep(3000);
+                carsPageObject.miscellaneous();
+                test.log(Status.PASS, "Cliquer sur l'icone miscellaneous");
+            } catch (Exception e) {
+                test.log(Status.FAIL,
+                        "Impossible de cliquer sur l'icone miscellaneous. Détails des exceptions: " + e.getMessage());
+                throw new RuntimeException("Impossible de cliquer sur l'icone miscellaneous.", e);
+            }
+        }
         @When("cliquer sur l'icone fermer")
         public void cliquer_sur_l_icone_fermer() {
         try{
             Thread.sleep(3000);
             carsPageObject.fermer();
-        }catch(Exception e){
+            test.log(Status.PASS, "cliquer sur l'icone fermer");}
+        catch(Exception e){
             test.log(Status.FAIL,
                     "Impossible de cliquer sur l'icone fermer. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de cliquer sur l'icone fermer.", e);
-        }
+            throw new RuntimeException("Impossible de cliquer sur l'icone fermer.",e);
+        }}
+
+
+    //chercher voiture
+
+    @When("saisir une marque de voiture")
+    public void saisir_une_marque_de_voiture() throws InterruptedException {
+        Thread.sleep(3000);
+        carsPageObject.Marque("BMW");
     }
 
-
+    @When("Cliquer sur le bouton reset")
+    public void cliquer_sur_le_bouton_reset() throws InterruptedException {
+        Thread.sleep(3000);
+    carsPageObject.reset();
+    }
 }
+
+
+
+
 
 
 

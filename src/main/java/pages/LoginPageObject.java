@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.sql.DriverManager;
+
 public class LoginPageObject {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -14,6 +16,8 @@ public class LoginPageObject {
         this.driver = _driver;
         this.wait = new WebDriverWait(driver, 60);
     }
+
+
 
     public void saisirEmail(String username) {
         WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(By.id("email-field")));

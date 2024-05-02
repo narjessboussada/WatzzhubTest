@@ -21,9 +21,11 @@ public class LoginStepDefinitions {
     public void arriver_à_la_page_d_accueil() {
         try {
             CucumberRunner.getDriver().navigate().to(CucumberRunner.TEST_SITE_URL);
-
+            test.log(Status.PASS, "arriver à la page d'accueil");
         } catch (Exception e) {
-            System.out.println("Impossible d'atteindre la page d'accueil: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible d'arriver à la page d'accueil. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible d'arriver à la page d'accueil.", e);
         }
     }
 
@@ -67,8 +69,11 @@ public class LoginStepDefinitions {
     public void cliquer_sur_le_boutton_connexion() {
         try {
             loginPageObject.se_connecter();
+            test.log(Status.PASS, "cliquer sur le boutton connexion");
         } catch (Exception e) {
-            System.out.println("Erreur lors de clique sur le bouton de connexion: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de cliquer sur le boutton connexion. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de cliquer sur le boutton connexion.", e);
         }
     }
 
@@ -76,8 +81,11 @@ public class LoginStepDefinitions {
     public void se_naviguer_à_la_page_home() {
         try {
             Assert.assertTrue("Unexpected redirection URL", loginPageObject.isHomePage());
+            test.log(Status.PASS, "se naviguer à la page Home");
         } catch (Exception e) {
-            System.out.println("Impossible d'atteindre la page d'accueil: " + e.getMessage());
+            test.log(Status.FAIL,
+                    "Impossible de se naviguer à la page Home. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de se naviguer à la page Home.", e);
         }
     }
 }
