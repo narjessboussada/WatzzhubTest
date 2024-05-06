@@ -1,4 +1,4 @@
-Feature: Users
+Feature: Utilisateurs
 
     Background:
         Given arriver à la page d'accueil
@@ -9,29 +9,25 @@ Feature: Users
         Then se naviguer à la page Home
 
 
-  @user
-Scenario: creer un utilisateur
+    @user
+    Scenario: creer un utilisateur
+        When cliquer sur user
+        When se navigue à la page user
+        When cliquer sur Create
+        When saisir nom
+        When saisir prenom
+        When saisir email
+        When choisir langue
+        When saisir numero de téléphone
+        Then cliquer enregistrer
 
-    When cliquer sur user
-    When se navigue à la page user
-
-    When cliquer sur Create
-    When saisir nom
-    When saisir prenom
-    When saisir email
-    When choisir langue
-    When saisir numero de téléphone
-    Then cliquer enregistrer
-
-
-     # modifier
     @delete_user
     Scenario: supprimer un utilisateur
-        Given cliquer user
-        When arriver à la page user
-      #  When chercher le user
-       # And cliquer sur les trois boutons
-        #And cliquer sur supprimer
+        When cliquer sur user
+        When se navigue à la page user
+        #When chercher utilisateur
+        And cliquer sur modifier
+        #And cliquer sur l'icone supprimer
         #Then l'utilisateur doit supprimer avec succès
 
 

@@ -79,22 +79,21 @@ public class UsersPageObject {
     //supp un user
 
 
-    public void iClickOnTheDeleteButtonForTheUser(String username) {
-        // Localiser le bouton de suppression pour l'utilisateur spécifié
-        WebElement deleteButton = driver.findElement(By.xpath("//tr[contains(.,'" + username + "')]/td/button[@class='delete-button']"));
-        // Cliquer sur le bouton de suppression
-        deleteButton.click();
-        // Vous pourriez avoir besoin de gérer les boîtes de dialogue de confirmation ici
-    }
+    public void email(String name){
+        WebElement email= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"mat-input-0\"]")));
+        email.clear();
+        email.sendKeys(name);
 
+    }
     public void Cliquer(){
-        WebElement points = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#\\30  > td.action-cell.text-center.align-middle.ng-star-inserted > button")));
+
+        WebElement points = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"0\"]/td[1]/div/button")));
         points.click();
 
     }
 
     public void Cliquer_Supprimer(){
-        WebElement delete = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-menu-panel-0 > div > div > button")));
+        WebElement delete = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-menu-panel-14 > div > div > buttonn")));
         delete.click();
 
     }

@@ -13,7 +13,6 @@ public class CarsPageObject {
 
     private WebDriver driver;
     private WebDriverWait wait;
-    private DriverManager CucumberRunner;
 
     public CarsPageObject(WebDriver _driver) {
         this.driver = _driver;
@@ -86,9 +85,9 @@ public class CarsPageObject {
     //Chercher voiture en saissant le modele
 
     public void Marque(String marque){
-        WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-input-0")));
-        emailField.clear();
-        emailField.sendKeys(marque);
+        WebElement Voiture = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-input-0")));
+        Voiture.clear();
+        Voiture.sendKeys(marque);
 
     }
 

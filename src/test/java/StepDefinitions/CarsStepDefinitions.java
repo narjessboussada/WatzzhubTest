@@ -1,19 +1,11 @@
 package StepDefinitions;
 
-import ExtentReport.ExtentManager;
-import com.aventstack.extentreports.ExtentReports;
+
 import com.aventstack.extentreports.Status;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CarsPageObject;
-
-import java.io.IOException;
 import static StepDefinitions.CucumberRunner.test;
 
 public class CarsStepDefinitions {
@@ -43,8 +35,8 @@ public class CarsStepDefinitions {
         try {
             //methode okhra
            CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/cars#cars");
-            //carsPageObject.naviguer();
-            //Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
+            carsPageObject.naviguer();
+            Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
         } catch (Exception e) {
             System.out.println("Impossible d'atteindre la page des voitures: " + e.getMessage());
         }
@@ -65,7 +57,7 @@ public class CarsStepDefinitions {
 
     @When("Cocher un modele")
     public void cocher_un_modele() {
-        try {
+        try { Thread.sleep(3000);
             carsPageObject.ChoisirModele();
             test.log(Status.PASS, "chocher un modele");
         } catch (Exception e) {
@@ -77,7 +69,7 @@ public class CarsStepDefinitions {
 
     @Then("Cliquer sur le bouton ok")
     public void cliquer_sur_le_bouton_ok() {
-        try {
+        try { Thread.sleep(3000);
             carsPageObject.CliquerOk();
             test.log(Status.PASS, "Cliquer Ok");}
             catch(Exception e){
@@ -92,6 +84,7 @@ public class CarsStepDefinitions {
          @Given("cliquer sur l'icone oeil")
          public void cliquer_sur_l_icone_oeil() {
              try {
+                 Thread.sleep(3000);
             carsPageObject.cliquer_icone();
                  test.log(Status.PASS, "cliquer sur l'icone oeil");}
              catch(Exception e){
@@ -103,6 +96,7 @@ public class CarsStepDefinitions {
 
             @Then("afficher les détails du voiture")
             public void afficher_les_détails_du_voiture() {
+
                 try {Thread.sleep(3000);
                carsPageObject.verifier();
                     test.log(Status.PASS, "afficher les détails du voiture");}

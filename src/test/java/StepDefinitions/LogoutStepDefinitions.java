@@ -3,11 +3,7 @@ package StepDefinitions;
 import com.aventstack.extentreports.Status;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import pages.LoginPageObject;
 import pages.LogoutPageObject;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import static StepDefinitions.CucumberRunner.test;
 
 public class LogoutStepDefinitions {
@@ -20,19 +16,20 @@ public class LogoutStepDefinitions {
 
     @When("Cliquer sur userName")
     public void cliquer_sur_user_name() {
-         try {
-        logoutPageObject.CliquerUser();
-             test.log(Status.PASS, "Cliquer sur userName");
-         } catch (Exception e) {
-             test.log(Status.FAIL,
-                     "Impossible de Cliquer sur userName. Détails des exceptions: " + e.getMessage());
-             throw new RuntimeException("Impossible de Cliquer sur userName.", e);
-         }
+        try {
+            logoutPageObject.CliquerUser();
+            test.log(Status.PASS, "Cliquer sur userName");
+        } catch (Exception e) {
+            test.log(Status.FAIL,
+                    "Impossible de Cliquer sur userName. Détails des exceptions: " + e.getMessage());
+            throw new RuntimeException("Impossible de Cliquer sur userName.", e);
+        }
     }
 
     @When("cliquer sur le bouton signout")
     public void cliquer_sur_le_bouton_signout() {
         try {
+            Thread.sleep(3000);
             logoutPageObject.Se_deconnecter();
             test.log(Status.PASS, "cliquer sur signout");
         } catch (Exception e) {
@@ -47,6 +44,7 @@ public class LogoutStepDefinitions {
     public void se_naviguer_vers_page_d_accueil() {
 
         try {
+            Thread.sleep(3000);
             Assert.assertTrue("Unexpected redirection URL", logoutPageObject.utilisateurEstDéconnecté());
             test.log(Status.PASS, "se naviguer vers page d'accueil");
         } catch (Exception e) {

@@ -13,12 +13,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "StepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports"},
-        tags = "@Reset "
+        tags = "@charge"
 )
 public class CucumberRunner {
         public static final String TEST_SITE_URL = "https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants";
