@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f7ad43b-8a8f-4be9-940d-a4279e51dd40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/ChargePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/StationStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/StationDeCharge.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Utilisateur.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Utilisateur.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" />
-    </list>
+    <list default="true" id="1f7ad43b-8a8f-4be9-940d-a4279e51dd40" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,7 +204,7 @@
       <workItem from="1714734851903" duration="5822000" />
       <workItem from="1714767396667" duration="641000" />
       <workItem from="1714849760548" duration="8314000" />
-      <workItem from="1715007812508" duration="708000" />
+      <workItem from="1715007812508" duration="1028000" />
     </task>
     <servers />
   </component>

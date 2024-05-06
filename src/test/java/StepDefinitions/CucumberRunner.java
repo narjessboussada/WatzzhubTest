@@ -19,7 +19,7 @@ import java.io.IOException;
         features = "src/test/resources/features",
         glue = "StepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports"},
-        tags = "@charge"
+        tags = ""
 )
 public class CucumberRunner {
         public static final String TEST_SITE_URL = "https://cpo.beta.wattzhub.com/auth/login?returnUrl=%2Ftenants";
