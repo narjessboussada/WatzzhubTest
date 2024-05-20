@@ -10,11 +10,10 @@ Feature: Cars
     @cars
     Scenario: filtrer une voiture
       Given cliquer sur le bouton cars
-      Then Se navigue à la page cars
+      When Se navigue à la page cars
       When Cliquer sur le bouton Car Makers
       When Cocher un modele
       Then Cliquer sur le bouton ok
-
 
     @carsDetails
     Scenario: Voir les détails d'une voiture

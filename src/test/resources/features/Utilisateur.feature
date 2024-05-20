@@ -8,7 +8,6 @@ Feature: Utilisateurs
         And cliquer sur le boutton connexion
         Then se naviguer à la page Home
 
-
     @user
     Scenario: creer un utilisateur
         When cliquer sur user

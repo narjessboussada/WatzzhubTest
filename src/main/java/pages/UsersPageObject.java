@@ -75,27 +75,20 @@ public class UsersPageObject {
         Field.sendKeys(Keys.ENTER);
     }
 
-
     //supp un user
-
-
     public void email(String name){
         WebElement email= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"mat-input-0\"]")));
         email.clear();
         email.sendKeys(name);
-
     }
     public void Cliquer(){
 
         WebElement points = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"0\"]/td[1]/div/button")));
         points.click();
-
     }
 
     public void Cliquer_Supprimer(){
         WebElement delete = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mat-menu-panel-14 > div > div > buttonn")));
         delete.click();
-
     }
-
 }

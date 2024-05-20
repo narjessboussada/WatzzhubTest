@@ -1,31 +1,39 @@
 package StepDefinitions;
 
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
+import base.TestBase;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+
 import pages.LoginPageObject;
 
-import static StepDefinitions.CucumberRunner.test;
-
-public class LoginStepDefinitions {
+public class LoginStepDefinitions extends TestBase {
 
     private LoginPageObject loginPageObject;
+    private WebDriver driver;
 
-        public LoginStepDefinitions() {
-        this.loginPageObject = new LoginPageObject(CucumberRunner.getDriver());
+    public LoginStepDefinitions() {
+        driver = TestBase.getDriver();
+        this.loginPageObject = new LoginPageObject(driver);
     }
 
     @Given("arriver à la page d'accueil")
     public void arriver_à_la_page_d_accueil() {
         try {
-            CucumberRunner.getDriver().navigate().to(CucumberRunner.TEST_SITE_URL);
-            test.log(Status.PASS, "arriver à la page d'accueil");
+            driver.navigate().to(TestBase.TEST_SITE_URL);
+            loginPageObject.logoIsDisplayed();
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("arriver à la page d'accueil", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible d'arriver à la page d'accueil. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible d'arriver à la page d'accueil.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("arriver à la page d'accueil", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
@@ -33,11 +41,12 @@ public class LoginStepDefinitions {
     public void saisir_l_adresse_correctement() {
         try {
             loginPageObject.saisirEmail("rania.tritar@continuousnet.com");
-            test.log(Status.PASS, "saisir adresse correctement");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de saisir adresse correctement. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de saisir adresse correctement.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
@@ -45,47 +54,51 @@ public class LoginStepDefinitions {
     public void saisir_le_mot_de_passe_correctement() {
         try {
             loginPageObject.saisirPassword("Rania.tritar123");
-            test.log(Status.PASS, "saisir mot de passe correctement");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible desaisir mot de passe correctement. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de saisir mot de passe correctement.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir le mot de passe correctement", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
-        }
-
+    }
 
     @When("cocher sur la case des conditions générales d'utilisateur")
     public void cocher_sur_la_case_des_conditions_générales_d_utilisateur() {
         try {
             loginPageObject.cocher();
-            test.log(Status.PASS, "cocher sur la case des conditions générales d'utilisateur");
+            Hooks._scenario.log(Status.PASS, MarkupHelper
+                    .createLabel("cocher sur la case des conditions générales d'utilisateur", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible desaisir mot de passe correctement. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de cocher sur la case des conditions générales d'utilisateur.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("cocher sur la case des conditions générales d'utilisateur",
+                    ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
+
     @When("cliquer sur le boutton connexion")
     public void cliquer_sur_le_boutton_connexion() {
         try {
             loginPageObject.se_connecter();
-            test.log(Status.PASS, "cliquer sur le boutton connexion");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("cliquer sur le boutton connexion", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de cliquer sur le boutton connexion. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de cliquer sur le boutton connexion.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("cliquer sur le boutton connexion", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
     @Then("se naviguer à la page Home")
     public void se_naviguer_à_la_page_home() {
         try {
-            Assert.assertTrue("Unexpected redirection URL", loginPageObject.isHomePage());
-            test.log(Status.PASS, "se naviguer à la page Home");
+            Assert.assertTrue(loginPageObject.isHomePage());
+            Hooks._scenario.log(Status.PASS, MarkupHelper.createLabel("se naviguer à la page Home", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de se naviguer à la page Home. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de se naviguer à la page Home.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("se naviguer à la page Home", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 }

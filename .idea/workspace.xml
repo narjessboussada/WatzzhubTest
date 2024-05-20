@@ -4,145 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f7ad43b-8a8f-4be9-940d-a4279e51dd40" name="Changes" comment="">
+    <list default="true" id="c15c2bfd-a08a-4d1d-9ef4-c8e3b8f7151a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extentconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/extentconfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChargePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ChargePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LogoutPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LogoutPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentReport/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExtentReport/ExtentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/StationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/StationStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/StationDeCharge.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/StationDeCharge.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Utilisateur.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Utilisateur.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2fMRnkdwKlkQWfw5v8urQsJb3vs" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2gSv4dMhbx2dl5w3hIVR6KKXLod" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Scenario: Chercher une voiture.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Creer des templates de station de charge.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Voir les détails d'une voiture.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: s'authentifier en tant qu'un utilisateur normal.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: se deconnecter (1).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: se deconnecter.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: supprimer un utilisateur.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CucumberRunner.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/testest/testest&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/watzzhubPro_2/watzzhubPro_14052024_v3/watzzhubPro/Projet&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CucumberRunner">
-    <configuration name="Scenario: Chercher une voiture" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" />
-      <option name="GLUE" value="StepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="project" />
-      <option name="NAME_FILTER" value="^Chercher une voiture$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Chercher une voiture$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Chercher une voiture" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Creer des templates de station de charge" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/StationDeCharge.feature" />
-      <option name="GLUE" value="StepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="project" />
-      <option name="NAME_FILTER" value="^Creer des templates de station de charge$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Creer des templates de station de charge$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Creer des templates de station de charge" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Voir les détails d'une voiture" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" />
-      <option name="GLUE" value="StepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="project" />
-      <option name="NAME_FILTER" value="^Voir les détails d\'une voiture$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Voir les détails d\'une voiture$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Voir les détails d'une voiture" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: se deconnecter (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Logout.feature" />
-      <option name="GLUE" value="StepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="project" />
-      <option name="NAME_FILTER" value="^se deconnecter$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^se deconnecter$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: se deconnecter" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="CucumberRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <extension name="coverage">
@@ -161,67 +77,24 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CucumberRunner" />
-        <item itemvalue="Cucumber Java.Scenario: Creer des templates de station de charge" />
-        <item itemvalue="Cucumber Java.Scenario: Voir les détails d'une voiture" />
-        <item itemvalue="Cucumber Java.Scenario: Chercher une voiture" />
-        <item itemvalue="Cucumber Java.Scenario: se deconnecter (1)" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1f7ad43b-8a8f-4be9-940d-a4279e51dd40" name="Changes" comment="" />
-      <created>1713609129675</created>
+      <changelist id="c15c2bfd-a08a-4d1d-9ef4-c8e3b8f7151a" name="Changes" comment="" />
+      <created>1715703602864</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713609129675</updated>
-      <workItem from="1713609130759" duration="14972000" />
-      <workItem from="1713791428253" duration="260000" />
-      <workItem from="1713814885578" duration="6747000" />
-      <workItem from="1713904269699" duration="64000" />
-      <workItem from="1713904347870" duration="141000" />
-      <workItem from="1713904500826" duration="1119000" />
-      <workItem from="1713951788653" duration="11000" />
-      <workItem from="1714059291531" duration="4048000" />
-      <workItem from="1714120183643" duration="1058000" />
-      <workItem from="1714121261534" duration="1909000" />
-      <workItem from="1714123197796" duration="11138000" />
-      <workItem from="1714230434783" duration="741000" />
-      <workItem from="1714318308375" duration="1047000" />
-      <workItem from="1714412032634" duration="6744000" />
-      <workItem from="1714465366273" duration="7851000" />
-      <workItem from="1714585042391" duration="3230000" />
-      <workItem from="1714588292462" duration="9075000" />
-      <workItem from="1714679487477" duration="2858000" />
-      <workItem from="1714682391843" duration="4272000" />
-      <workItem from="1714724096731" duration="7627000" />
-      <workItem from="1714734851903" duration="5822000" />
-      <workItem from="1714767396667" duration="641000" />
-      <workItem from="1714849760548" duration="8314000" />
-      <workItem from="1715007812508" duration="2901000" />
+      <updated>1715703602864</updated>
+      <workItem from="1715703603932" duration="3217000" />
+      <workItem from="1715805850205" duration="1489000" />
+      <workItem from="1715875312023" duration="684000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

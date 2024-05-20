@@ -17,19 +17,18 @@ public class LogoutPageObject {
     }
 
     public void CliquerUser() {
-        WebElement user = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > app-root > app-layout > div > div.sidebar > app-sidebar-cmp > div.sidebar-wrapper > div > div.user-info > a")));
+        WebElement user = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(
+                "body > app-root > app-layout > div > div.sidebar > app-sidebar-cmp > div.sidebar-wrapper > div > div.user-info > a")));
         user.click();
     }
 
     public void Se_deconnecter() {
-        WebElement signout = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#collapseDetails > ul > li:nth-child(2) > a > span.sidebar-normal")));
+        WebElement signout = wait.until(ExpectedConditions.elementToBeClickable(
+                By.cssSelector("#collapseDetails > ul > li:nth-child(2) > a > span.sidebar-normal")));
         signout.click();
     }
 
-
-        public Boolean utilisateurEstDéconnecté() {
-            return wait.until(ExpectedConditions.urlToBe("https://cpo.beta.wattzhub.com/auth/login"));
-
-        }
+    public boolean utilisateurEstDéconnecté() {
+        return wait.until(ExpectedConditions.urlToBe("https://cpo.beta.wattzhub.com/auth/login"));
     }
-
+}
