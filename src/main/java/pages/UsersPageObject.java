@@ -15,6 +15,10 @@ public class UsersPageObject {
         this.driver = _driver;
         this.wait = new WebDriverWait(driver, 60);
     }
+    public void sendText(WebElement field, String text) {
+        field.clear();  // Nettoie le champ avant d'entrer du texte
+        field.sendKeys(text);  // Envoie le texte au champ spécifi
+    }
 
     public void CliquerUser() {
         WebElement create = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[3]/a/p")));
@@ -26,22 +30,19 @@ public class UsersPageObject {
         createUser.click();
     }
 
-    public void SaisirName(String name) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-input-3\"]")));
-        element.clear();
-        element.sendKeys(name);
+    public void SaisirNom(String Nom){
+        WebElement NameField = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"mat-input-3\"]")));
+        sendText(NameField, Nom);
+    }
+    public void SaisirPrenom(String Prenom) {
+        WebElement FirstNameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-input-4\"]")));
+        sendText(FirstNameField, Prenom);
     }
 
-    public void SaisirFirstName(String firstname) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-input-4\"]")));
-        element.clear();
-        element.sendKeys(firstname);
-    }
+    public void SaisirEmail(String Email) {
+        WebElement EmailElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-input-5\"]")));
+        sendText(EmailElement, Email);
 
-    public void SaisirEmail(String email) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-input-5\"]")));
-        element.clear();
-        element.sendKeys(email);
     }
 
     public void ChoisirLangue() {
@@ -63,10 +64,9 @@ public class UsersPageObject {
         optionRole.click();
     }
 
-    public void SaisirNumeroTelephone(String phoneNumber) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-input-6\"]")));
-        element.clear();
-        element.sendKeys(phoneNumber);
+    public void SaisirNumeroTelephone(String NumTel) {
+        WebElement NumTelElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-input-6\"]")));
+        sendText(NumTelElement, NumTel);
     }
 
     public void enregistrer() {

@@ -23,8 +23,8 @@ public class LoginStepDefinitions extends TestBase {
         this.loginPageObject = new LoginPageObject(driver);
     }
 
-    @Given("arriver à la page d'accueil")
-    public void arriver_à_la_page_d_accueil() {
+    @Given("arriver a la page d'accueil")
+    public void arriver_a_la_page_d_accueil() {
         try {
             driver.navigate().to(TestBase.TEST_SITE_URL);
             loginPageObject.logoIsDisplayed();
@@ -37,31 +37,24 @@ public class LoginStepDefinitions extends TestBase {
         }
     }
 
-    @When("saisir l'adresse correctement")
-    public void saisir_l_adresse_correctement() {
+    @When("saisir {string} et {string}")
+    public void saisir_Email_and_Password(String Email, String Password) {
         try {
-            loginPageObject.saisirEmail("rania.tritar@continuousnet.com");
+            loginPageObject.saisirEmail(Email);
+            loginPageObject.saisirPassword(Password);
             Hooks._scenario.log(Status.PASS,
-                    MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.GREEN));
-        } catch (Exception e) {
-            Hooks._scenario.fail(MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.RED));
-            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
-            throw e;
-        }
-    }
+                    MarkupHelper.createLabel("saisir l'email correctement", ExtentColor.GREEN));
+            MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.GREEN);
 
-    @When("saisir le mot de passe correctement")
-    public void saisir_le_mot_de_passe_correctement() {
-        try {
-            loginPageObject.saisirPassword("Rania.tritar123");
-            Hooks._scenario.log(Status.PASS,
-                    MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.GREEN));
         } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("Erreur lors de la saisie de l'email", ExtentColor.RED));
             Hooks._scenario.fail(MarkupHelper.createLabel("saisir le mot de passe correctement", ExtentColor.RED));
             Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
             throw e;
         }
     }
+
+
 
     @When("cocher sur la case des conditions générales d'utilisateur")
     public void cocher_sur_la_case_des_conditions_générales_d_utilisateur() {

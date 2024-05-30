@@ -11,7 +11,7 @@ import base.TestBase;
         features = "src/test/resources/features",
         glue = "StepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports"},
-        tags = "@supprimer_utilisateur"
+        tags = "@reset"
 )
 public class CucumberRunner extends TestBase  {
 

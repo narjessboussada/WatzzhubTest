@@ -164,7 +164,6 @@ public class StationStepDefinitions extends TestBase {
         try {
             TestBase.getDriver()
                     .get("https://cpo.beta.wattzhub.com/charging-station-templates#charging-station-templates");
-            Thread.sleep(5000);
             Hooks._scenario.log(Status.PASS,
                     MarkupHelper.createLabel("se navigue à la page Chargin Station Templates", ExtentColor.GREEN));
         } catch (Exception e) {
