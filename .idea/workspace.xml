@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aff8b1f-c0cf-496a-a112-389436893d6f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extentconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/extentconfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChargePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ChargePageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LogoutPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LogoutPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentReport/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExtentReport/ExtentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/StationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/StationStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/StationDeCharge.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/StationDeCharge.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Utilisateur.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Utilisateur.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Voitures.feature" afterDir="false" />
-    </list>
+    <list default="true" id="7aff8b1f-c0cf-496a-a112-389436893d6f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +80,7 @@
       <workItem from="1716671500239" duration="632000" />
       <workItem from="1716800782328" duration="5341000" />
       <workItem from="1717014634830" duration="605000" />
-      <workItem from="1717022226917" duration="3346000" />
+      <workItem from="1717022226917" duration="3647000" />
     </task>
     <servers />
   </component>
