@@ -1,160 +1,205 @@
 package StepDefinitions;
 
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
+import base.TestBase;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.UsersPageObject;
 
-import static StepDefinitions.CucumberRunner.test;
-
+import org.openqa.selenium.WebDriver;
 
 public class UsersStepDefinitions {
     private UsersPageObject usersPageObject;
+    private WebDriver driver;
 
     public UsersStepDefinitions() {
-        this.usersPageObject = new UsersPageObject(CucumberRunner.getDriver());
+        driver = TestBase.getDriver();
+        this.usersPageObject = new UsersPageObject(driver);
     }
 
     @When("cliquer sur user")
     public void cliquer_sur_user() {
-
+        try {
             usersPageObject.CliquerUser();
-
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("cliquer sur user", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("cliquer sur user", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
     }
 
     @When("se navigue à la page user")
     public void se_navigue_à_la_page_user() {
         try {
-            CucumberRunner.getDriver().get("https://cpo.beta.wattzhub.com/users#all");
-            Thread.sleep(5000); // Attendre quelques secondes (juste pour l'exemple)
-            test.log(Status.PASS, "se navigue à la page user");
+            TestBase.getDriver().get("https://cpo.beta.wattzhub.com/users#all");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("se navigue à la page user", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de se navigue à la page user. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible se navigue à la page user.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("se navigue à la page user", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
     @When("cliquer sur Create")
     public void cliquer_sur_create() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.CreateUser();
-            test.log(Status.PASS, "cliquer sur Create");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("cliquer sur Create", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de cliquer sur Create. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de cliquer sur Create.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("cliquer sur Create", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
     @When("saisir nom")
     public void saisir_nom() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.SaisirName("test");
-            test.log(Status.PASS, " saisir nom");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir nom", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de saisir nom. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de saisir nom.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir nom", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
-
-
     @When("saisir prenom")
     public void saisir_prenom() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.SaisirFirstName("tesst");
-            test.log(Status.PASS, " saisir prenom");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir prenom", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de saisir prenom. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de saisir prenom.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir prenom", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
     @When("saisir email")
     public void saisir_email() {
-        try {Thread.sleep(3000);
-            usersPageObject.SaisirEmail("testttttt12@gmail.com");
-            test.log(Status.PASS, " saisir email");
+        try {
+            usersPageObject.SaisirEmail("testttttttt12@gmail.com");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir email", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de saisir email. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de saisir email.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir email", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
     @When("choisir langue")
     public void choisir_langue() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.ChoisirLangue();
-            test.log(Status.PASS, " choisir langue");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("choisir langue", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de choisir langue. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de choisir langue.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("choisir langue", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
     @When("choisir statut")
     public void choisir_statut() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.ChoisirStatut();
-            test.log(Status.PASS, "Choisir statut");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("choisir statut", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de Choisir statut. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de Choisir statut.", e);        }
+            Hooks._scenario.fail(MarkupHelper.createLabel("choisir statut", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
     }
 
     @When("choisir role")
     public void choisir_role() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.ChoisirRole();
-            test.log(Status.PASS, "Choisir role");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("choisir role", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de choisir un role. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de choisir un role.", e);        }
+            Hooks._scenario.fail(MarkupHelper.createLabel("choisir role", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
-
+    }
 
     @When("saisir numero de téléphone")
     public void saisir_numero_de_téléphone() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.SaisirNumeroTelephone("0689899557");
-            test.log(Status.PASS, "Saisir le numéro de téléphone");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir numero de téléphone", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de saisir le numéro de telephone. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible saisir le numéro de telephone.", e);        }
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir numero de téléphone", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
     }
+
     @Then("cliquer enregistrer")
     public void cliquer_enregistrer() {
-        try {Thread.sleep(3000);
+        try {
             usersPageObject.enregistrer();
-            test.log(Status.PASS, "Appuyez Entrée dans le champ du nom de l'utilisateur pour l'enregistrer");
-        } catch(Exception e){
-            test.log(Status.FAIL,
-                    "Impossible d'appuyer sur Entrée dans le champ du nom de l'utilisateur. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible d'appuyer sur Entrée dans le champ du nom de l'utilisateur.", e);
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("cliquer enregistrer", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("cliquer enregistrer", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
-    //supp user
+
+    // supp user
     @When("chercher utilisateur")
-    public void  chercher_utilisateur() {
-        usersPageObject.email("testttt@gmail.com");
-        }
-
-        @When("cliquer sur modifier")
-    public void cliquer_sur_modifier(){
-        usersPageObject.Cliquer();
-
-        }
-        @When("cliquer sur l'icone supprimer")
-    public void cliquer_sur_l_icone_supprimer(){
-        usersPageObject.Cliquer_Supprimer();
+    public void chercher_utilisateur() {
+        try {
+            usersPageObject.email("testttt@gmail.com");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("chercher utilisateur", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("chercher utilisateur", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
+    @When("cliquer sur modifier")
+    public void cliquer_sur_modifier() {
+        try {
+            usersPageObject.Cliquer();
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("chercher utilisateur", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("chercher utilisateur", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
+    }
+
+    @When("cliquer sur l'icone supprimer")
+    public void cliquer_sur_l_icone_supprimer() {
+        try {
+            usersPageObject.Cliquer_Supprimer();
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("chercher utilisateur", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("chercher utilisateur", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
+    }
+}

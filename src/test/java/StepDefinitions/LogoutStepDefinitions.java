@@ -1,56 +1,63 @@
 package StepDefinitions;
 
-import com.aventstack.extentreports.Status;
+import base.TestBase;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.LogoutPageObject;
-import static StepDefinitions.CucumberRunner.test;
+import org.openqa.selenium.WebDriver;
 
-public class LogoutStepDefinitions {
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
+import pages.LogoutPageObject;
+
+public class LogoutStepDefinitions extends TestBase{
 
     private LogoutPageObject logoutPageObject;
+    private WebDriver driver;
 
     public LogoutStepDefinitions() {
-        this.logoutPageObject = new LogoutPageObject(CucumberRunner.getDriver());
+        driver = TestBase.getDriver();
+        this.logoutPageObject = new LogoutPageObject(driver);
     }
 
-    @When("Cliquer sur userName")
+    @When("cliquer sur userName")
     public void cliquer_sur_user_name() {
         try {
             logoutPageObject.CliquerUser();
-            test.log(Status.PASS, "Cliquer sur userName");
+                        Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("Cliquer sur userName", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de Cliquer sur userName. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de Cliquer sur userName.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("Cliquer sur userName", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 
     @When("cliquer sur le bouton signout")
     public void cliquer_sur_le_bouton_signout() {
         try {
-            Thread.sleep(3000);
             logoutPageObject.Se_deconnecter();
-            test.log(Status.PASS, "cliquer sur signout");
+            Hooks._scenario.log(Status.PASS,
+            MarkupHelper.createLabel("cliquer sur le bouton signout", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de cliquer sur signout. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de cliquer sur signout.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("cliquer sur le bouton signout", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
-
 
     @When("se naviguer vers page d'accueil")
     public void se_naviguer_vers_page_d_accueil() {
 
         try {
-            Thread.sleep(3000);
-            Assert.assertTrue("Unexpected redirection URL", logoutPageObject.utilisateurEstDéconnecté());
-            test.log(Status.PASS, "se naviguer vers page d'accueil");
+            Assert.assertTrue(logoutPageObject.utilisateurEstDéconnecté());
+            Hooks._scenario.log(Status.PASS,
+            MarkupHelper.createLabel("se naviguer vers page d'accueil", ExtentColor.GREEN));
         } catch (Exception e) {
-            test.log(Status.FAIL,
-                    "Impossible de se naviguer vers page d'accueil. Détails des exceptions: " + e.getMessage());
-            throw new RuntimeException("Impossible de se naviguer vers page d'accueil.", e);
+            Hooks._scenario.fail(MarkupHelper.createLabel("se naviguer vers page d'accueil", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
         }
     }
 }

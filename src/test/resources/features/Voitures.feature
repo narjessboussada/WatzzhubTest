@@ -1,4 +1,4 @@
-Feature: Cars
+Feature: Voiture
     Background:
       Given arriver à la page d'accueil
       When saisir l'adresse correctement
@@ -7,33 +7,32 @@ Feature: Cars
       And cliquer sur le boutton connexion
       Then se naviguer à la page Home
 
-    @cars
+    @voiture
     Scenario: filtrer une voiture
       Given cliquer sur le bouton cars
-      Then Se navigue à la page cars
-      When Cliquer sur le bouton Car Makers
-      When Cocher un modele
-      Then Cliquer sur le bouton ok
+      Then se navigue à la page cars
+      When cliquer sur le bouton Car Makers
+      When cocher un modele
+      Then cliquer sur le bouton ok
 
-
-    @carsDetails
+    @détail_voiture
     Scenario: Voir les détails d'une voiture
       Given cliquer sur le bouton cars
-      When Se navigue à la page cars
+      When se navigue à la page cars
 
       Given cliquer sur l'icone oeil
       #Then afficher les détails du voiture
-      When Cliquer sur l'icone batterie
-      And Cliquer sur l'icone pictures
-      And Cliquer sur l'icone miscellaneous
+      When cliquer sur l'icone batterie
+      And cliquer sur l'icone pictures
+      And cliquer sur l'icone miscellaneous
       And cliquer sur l'icone fermer
 
-@reset
+    @réinitialiser
     Scenario: chercher une voiture
       Given cliquer sur le bouton cars
-      Then Se navigue à la page cars
+      Then se navigue à la page cars
 
       When saisir une marque de voiture
       #Then Afficher la liste filtrée
-      When Cliquer sur le bouton reset
+      When cliquer sur le bouton reset
       #Then Afficher l'ancienne liste

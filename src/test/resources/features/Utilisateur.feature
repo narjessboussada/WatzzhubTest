@@ -8,8 +8,7 @@ Feature: Utilisateurs
         And cliquer sur le boutton connexion
         Then se naviguer à la page Home
 
-
-    @user
+    @utilisateur
     Scenario: creer un utilisateur
         When cliquer sur user
         When se navigue à la page user
@@ -21,7 +20,7 @@ Feature: Utilisateurs
         When saisir numero de téléphone
         Then cliquer enregistrer
 
-    @delete_user
+    @supprimer_utilisateur
     Scenario: supprimer un utilisateur
         When cliquer sur user
         When se navigue à la page user
