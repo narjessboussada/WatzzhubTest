@@ -164,6 +164,10 @@ public class StationStepDefinitions extends TestBase {
         try {
             TestBase.getDriver()
                     .get("https://cpo.beta.wattzhub.com/charging-station-templates#charging-station-templates");
+<<<<<<< HEAD
+=======
+            Thread.sleep(5000);
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
             Hooks._scenario.log(Status.PASS,
                     MarkupHelper.createLabel("se navigue à la page Chargin Station Templates", ExtentColor.GREEN));
         } catch (Exception e) {
@@ -187,7 +191,11 @@ public class StationStepDefinitions extends TestBase {
         }
     }
 
+<<<<<<< HEAD
     @When("saisir JSON template")
+=======
+    @When("Saisir JSON template")
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     public void saisir_json_template() {
         try {
             chargePageObject.SaisirTemplate(template);
@@ -200,7 +208,11 @@ public class StationStepDefinitions extends TestBase {
         }
     }
 
+<<<<<<< HEAD
     @Then("cliquer sur l'icone enregistrer")
+=======
+    @Then("Cliquer sur l'icone enregistrer")
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     public void cliquer_sur_l_icone_enregistrer() {
         try {
             chargePageObject.enregistrer();

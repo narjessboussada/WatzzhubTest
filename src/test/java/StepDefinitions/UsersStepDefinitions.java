@@ -61,6 +61,7 @@ public class UsersStepDefinitions {
         }
     }
 
+<<<<<<< HEAD
     @When("saisir Nom {string} et Prenom {string}")
     public void saisir_Nom_et_Prenom(String Nom, String Prenom) {
         try {
@@ -72,11 +73,22 @@ public class UsersStepDefinitions {
         } catch (Exception e) {
             Hooks._scenario.fail(MarkupHelper.createLabel("saisir nom", ExtentColor.RED));
             Hooks._scenario.fail(MarkupHelper.createLabel("saisir prenom", ExtentColor.RED));
+=======
+    @When("saisir nom")
+    public void saisir_nom() {
+        try {
+            usersPageObject.SaisirName("test");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir nom", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir nom", ExtentColor.RED));
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
             Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
             throw e;
         }
 
     }
+<<<<<<< HEAD
     @When("saisir Email1 {string} et Numero {string}")
     public void saisir_Email1_et_Numero(String Email , String NumTel) {
         try {
@@ -88,6 +100,30 @@ public class UsersStepDefinitions {
         } catch (Exception e) {
             Hooks._scenario.fail(MarkupHelper.createLabel("saisir email", ExtentColor.RED));
             Hooks._scenario.fail(MarkupHelper.createLabel("saisir numero de téléphone", ExtentColor.RED));
+=======
+
+    @When("saisir prenom")
+    public void saisir_prenom() {
+        try {
+            usersPageObject.SaisirFirstName("tesst");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir prenom", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir prenom", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
+    }
+
+    @When("saisir email")
+    public void saisir_email() {
+        try {
+            usersPageObject.SaisirEmail("testttttt12@gmail.com");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir email", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir email", ExtentColor.RED));
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
             Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
             throw e;
         }
@@ -130,10 +166,28 @@ public class UsersStepDefinitions {
             Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
             throw e;
         }
+<<<<<<< HEAD
     }
 
 
 
+=======
+    }
+
+    @When("saisir numero de téléphone")
+    public void saisir_numero_de_téléphone() {
+        try {
+            usersPageObject.SaisirNumeroTelephone("0689899557");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir numero de téléphone", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir numero de téléphone", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
+    }
+
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     @Then("cliquer enregistrer")
     public void cliquer_enregistrer() {
         try {

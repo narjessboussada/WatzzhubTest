@@ -6,10 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+<<<<<<< HEAD
 import java.time.Duration;
 
 import static java.nio.file.Files.getAttribute;
 
+=======
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
 public class LoginPageObject {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -26,7 +29,15 @@ public class LoginPageObject {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("company__logo")));
     }
 
+<<<<<<< HEAD
     public void saisirEmail(String email) {
+=======
+    public void logoIsDisplayed(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("company__logo")));
+    }
+
+    public void saisirEmail(String username) {
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
         WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(By.id("email-field")));
 
         sendText(emailField, email);

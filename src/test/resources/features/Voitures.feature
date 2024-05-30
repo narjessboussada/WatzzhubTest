@@ -1,5 +1,6 @@
 Feature: Cars
 
+<<<<<<< HEAD
   @cars
   Scenario Outline: filtrer une voiture
     Given arriver a la page d'accueil
@@ -17,6 +18,20 @@ Feature: Cars
     Examples:
       | Email                          | Password        |
       | rania.tritar@continuousnet.com | Rania.tritar123 |
+=======
+    @cars
+    Scenario: filtrer une voiture
+      Given cliquer sur le bouton cars
+      When Se navigue à la page cars
+      When Cliquer sur le bouton Car Makers
+      When Cocher un modele
+      Then Cliquer sur le bouton ok
+
+    @carsDetails
+    Scenario: Voir les détails d'une voiture
+      Given cliquer sur le bouton cars
+      When Se navigue à la page cars
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
 
   @carsDetails
   Scenario Outline: Voir les détails d'une voiture

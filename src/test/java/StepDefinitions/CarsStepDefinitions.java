@@ -116,7 +116,11 @@ public class CarsStepDefinitions extends TestBase {
         }
     }
 
+<<<<<<< HEAD
     @When("cliquer sur l'icone batterie")
+=======
+    @When("Cliquer sur l'icone batterie")
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     public void cliquer_sur_l_icone_batterie() {
         try {
             carsPageObject.batterie();
@@ -129,7 +133,11 @@ public class CarsStepDefinitions extends TestBase {
         }
     }
 
+<<<<<<< HEAD
     @When("cliquer sur l'icone pictures")
+=======
+    @When("Cliquer sur l'icone pictures")
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     public void cliquer_sur_l_icone_pictures() {
         try {
             carsPageObject.image();
@@ -142,7 +150,11 @@ public class CarsStepDefinitions extends TestBase {
         }
     }
 
+<<<<<<< HEAD
     @When("cliquer sur l'icone miscellaneous")
+=======
+    @When("Cliquer sur l'icone miscellaneous")
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     public void cliquer_sur_l_icone_miscellaneous() {
         try {
             carsPageObject.miscellaneous();

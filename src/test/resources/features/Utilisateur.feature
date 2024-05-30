@@ -8,6 +8,11 @@ Feature: Utilisateurs
         And cliquer sur le boutton connexion
         Then se naviguer à la page Home
 
+<<<<<<< HEAD
+=======
+    @user
+    Scenario: creer un utilisateur
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
         When cliquer sur user
         When se navigue à la page user
         When cliquer sur Create

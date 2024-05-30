@@ -18,7 +18,11 @@ public class ExtentManager {
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
             extentReport = new ExtentReports();
             extentReport.attachReporter(sparkReporter);
+<<<<<<< HEAD
             extentReport.setSystemInfo("User", "Narjess Boussada");
+=======
+            extentReport.setSystemInfo("User", "SAID Med Bechir");
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
             extentReport.setSystemInfo("Machine", 	"Windows 10" + "64 Bit");
             extentReport.setSystemInfo("selenium-java", "3.141.59");
             extentReport.setSystemInfo("io.cucumber", "6.10.4");

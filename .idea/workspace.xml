@@ -4,12 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="7aff8b1f-c0cf-496a-a112-389436893d6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" afterDir="false" />
+=======
+    <list default="true" id="c15c2bfd-a08a-4d1d-9ef4-c8e3b8f7151a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extentconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/extentconfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CarsPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChargePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ChargePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LogoutPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LogoutPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsersPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentReport/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExtentReport/ExtentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CarsStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LoginStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/LogoutStepDefinitions.java" afterDir="false" />
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/StationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/StationStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/UsersStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Authentification.feature" afterDir="false" />
@@ -25,37 +43,51 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
+<<<<<<< HEAD
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2gyVlkSZP0SjEKwXLj4cnDHbZCT" />
+=======
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2gSv4dMhbx2dl5w3hIVR6KKXLod" />
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+<<<<<<< HEAD
     &quot;Cucumber Java.Scenario: se connecter.executor&quot;: &quot;Run&quot;,
+=======
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     &quot;JUnit.CucumberRunner.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+<<<<<<< HEAD
     &quot;last_opened_file_path&quot;: &quot;C:/Arij_14052024/Arij_14052024/testest&quot;,
+=======
+    &quot;last_opened_file_path&quot;: &quot;C:/watzzhubPro_2/watzzhubPro_14052024_v3/watzzhubPro/Projet&quot;,
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+<<<<<<< HEAD
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+=======
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+<<<<<<< HEAD
   <component name="RunManager" selected="JUnit.CucumberRunner">
     <configuration name="Scenario: se connecter" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
@@ -77,6 +109,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+  <component name="RunManager">
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     <configuration name="CucumberRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <extension name="coverage">
@@ -95,13 +130,17 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CucumberRunner" />
+<<<<<<< HEAD
         <item itemvalue="Cucumber Java.Scenario: se connecter" />
+=======
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="7aff8b1f-c0cf-496a-a112-389436893d6f" name="Changes" comment="" />
       <created>1716669958148</created>
       <option name="number" value="Default" />
@@ -119,6 +158,16 @@
       <workItem from="1717014634830" duration="605000" />
       <workItem from="1717022226917" duration="19979000" />
       <workItem from="1717106389901" duration="1135000" />
+=======
+      <changelist id="c15c2bfd-a08a-4d1d-9ef4-c8e3b8f7151a" name="Changes" comment="" />
+      <created>1715703602864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715703602864</updated>
+      <workItem from="1715703603932" duration="3217000" />
+      <workItem from="1715805850205" duration="1489000" />
+      <workItem from="1715875312023" duration="684000" />
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
     </task>
     <servers />
   </component>

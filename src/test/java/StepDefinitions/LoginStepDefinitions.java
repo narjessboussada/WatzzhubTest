@@ -40,6 +40,7 @@ public class LoginStepDefinitions extends TestBase {
     @When("saisir {string} et {string}")
     public void saisir_Email_and_Password(String Email, String Password) {
         try {
+<<<<<<< HEAD
             loginPageObject.saisirEmail(Email);
             loginPageObject.saisirPassword(Password);
             Hooks._scenario.log(Status.PASS,
@@ -49,12 +50,34 @@ public class LoginStepDefinitions extends TestBase {
         } catch (Exception e) {
             Hooks._scenario.fail(MarkupHelper.createLabel("Erreur lors de la saisie de l'email", ExtentColor.RED));
             Hooks._scenario.fail(MarkupHelper.createLabel("saisir le mot de passe correctement", ExtentColor.RED));
+=======
+            loginPageObject.saisirEmail("rania.tritar@continuousnet.com");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.RED));
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
             Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
             throw e;
         }
     }
 
+<<<<<<< HEAD
 
+=======
+    @When("saisir le mot de passe correctement")
+    public void saisir_le_mot_de_passe_correctement() {
+        try {
+            loginPageObject.saisirPassword("Rania.tritar123");
+            Hooks._scenario.log(Status.PASS,
+                    MarkupHelper.createLabel("saisir l'adresse correctement", ExtentColor.GREEN));
+        } catch (Exception e) {
+            Hooks._scenario.fail(MarkupHelper.createLabel("saisir le mot de passe correctement", ExtentColor.RED));
+            Hooks._scenario.fail(MarkupHelper.createLabel(e.getMessage(), ExtentColor.WHITE));
+            throw e;
+        }
+    }
+>>>>>>> 1d042e6676dc356f77acc6eec5d0a37db9e334da
 
     @When("cocher sur la case des conditions générales d'utilisateur")
     public void cocher_sur_la_case_des_conditions_générales_d_utilisateur() {
